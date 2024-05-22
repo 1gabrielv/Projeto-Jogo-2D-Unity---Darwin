@@ -13,6 +13,7 @@ public class movePlayer : MonoBehaviour
     public float raioDeVerificacao;
     private LayerMask layerDoChao;
     private Animator animator; // Troca de animações
+    GameObject cameraPos;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class movePlayer : MonoBehaviour
         // verificadorDeChao = GameObject.Find("verificarChao").transform; <-- ou isso caso não dê certo o de cima
         layerDoChao = LayerMask.GetMask("chao"); // Define a LayerMask para o layer "chao"
         animator = GetComponent<Animator>();
+        cameraPos = GameObject.Find("Main Camera");
     }
 
     // Update is called once per frame
@@ -31,6 +33,9 @@ public class movePlayer : MonoBehaviour
     {
         estaNoChao = Physics2D.OverlapCircle(verificadorDeChao.position, raioDeVerificacao, layerDoChao);
         AtualizarAnimacoes();
+        cameraPos.transform.position = new Vector3(cameraPos.transform.position.x, oRigidbody2D.transform.position.x, cameraPos.transform.position.z);
+        cameraPos.transform.position = new Vector3(cameraPos.transform.position.y, oRigidbody2D.transform.position.y, cameraPos.transform.position.z);
+
     }
     
     void FixedUpdate() { // A Unity às vezes buga sem isso pra movimentar o player
