@@ -6,50 +6,62 @@ public class movePlayer : MonoBehaviour
 {
     public float forcaPulo;
     public float speedPlayer;
-    Rigidbody2D oRigidbody2D; 
-    SpriteRenderer oSpriteRenderer; //parte do persinagem que controla o sprite(olhar pra fentre ou pra tras ou ficar de cabeça pra baixo)
-    bool estaNoChao;
-    Transform verificadorDeChao;
+    private Rigidbody2D oRigidbody2D; 
+    private SpriteRenderer oSpriteRenderer; // Parte do personagem que controla o sprite (olhar pra frente ou pra trás ou ficar de cabeça pra baixo)
+    private bool estaNoChao;
+    private Transform verificadorDeChao; 
     public float raioDeVerificacao;
-    LayerMask layerDoChao;
+    private LayerMask layerDoChao;
+    private Animator animator; // Troca de animações
+
     // Start is called before the first frame update
     void Start()
     {
-        oRigidbody2D = GetComponent<Rigidbody2D>(); //atribui o rigidbody sem precisar arrastar dentro da unity (isso semrpre dar erro)
+        oRigidbody2D = GetComponent<Rigidbody2D>(); // Atribui o Rigidbody sem precisar arrastar dentro da Unity
         oSpriteRenderer = GetComponent<SpriteRenderer>(); // Atribui o SpriteRenderer sem precisar arrastar dentro da Unity
 
-        verificadorDeChao = transform.Find("verificarChao"); //acha um GameObject de forma privada
-        //verificadorDeChao = GameObject.Find("verificarChao").transform; <-- ou isso caso não de certo o de cima
-        layerDoChao = LayerMask.GetMask("chao"); // Define a LayerMask para o layer "chao" 
-
-
+        verificadorDeChao = transform.Find("verificarChao"); // Acha um GameObject de forma privada
+        // verificadorDeChao = GameObject.Find("verificarChao").transform; <-- ou isso caso não dê certo o de cima
+        layerDoChao = LayerMask.GetMask("chao"); // Define a LayerMask para o layer "chao"
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        estaNoChao = Physics2D.OverlapCircle(verificadorDeChao.position, raioDeVerificacao, layerDoChao);
+        AtualizarAnimacoes();
     }
     
-    void FixedUpdate() { //a unity as vezes buga sem isso pra movimentar o player
+    void FixedUpdate() { // A Unity às vezes buga sem isso pra movimentar o player
         moveplayer();
         pular();
     }
-    public void moveplayer(){ //fazer o player andar
+
+    public void moveplayer() { // Fazer o player andar
         float inputMove = Input.GetAxisRaw("Horizontal");
         oRigidbody2D.velocity = new Vector2(inputMove * speedPlayer, oRigidbody2D.velocity.y);
 
-        if(inputMove > 0){
+        if (inputMove > 0) {
             oSpriteRenderer.flipX = false; // Vira o sprite para a direita
         }
-        if(inputMove < 0){
+        if (inputMove < 0) {
             oSpriteRenderer.flipX = true; // Vira o sprite para a esquerda
         }
     }
-    public void pular(){
-        estaNoChao = Physics2D.OverlapCircle(verificadorDeChao.position, raioDeVerificacao, layerDoChao);
-        if(Input.GetKeyDown(KeyCode.Space) && estaNoChao == true){
+
+    public void pular() {
+        if (Input.GetKeyDown(KeyCode.Space) && estaNoChao) {
             oRigidbody2D.velocity = Vector2.up * forcaPulo;
         }
+    }
+
+    void AtualizarAnimacoes() {
+        // Atualiza a animação de pulo
+        animator.SetBool("taPulando", !estaNoChao);
+
+        // Atualiza a animação de corrida
+        float inputMove = Input.GetAxisRaw("Horizontal");
+        animator.SetBool("taCorrendo", inputMove != 0);
     }
 }
