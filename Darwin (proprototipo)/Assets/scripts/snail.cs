@@ -18,8 +18,8 @@ public class snail : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        pontoA = GameObject.Find("ponto a");
-        pontoB = GameObject.Find("ponto b");
+        pontoA = GameObject.Find("pa snail");
+        pontoB = GameObject.Find("pb snail");
         animator = GetComponent<Animator>();
         animator.SetBool("taCorrendo", true);
         currentPoint = pontoB.transform;

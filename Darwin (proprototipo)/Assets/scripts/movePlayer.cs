@@ -59,6 +59,9 @@ public class movePlayer : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && estaNoChao) {
             oRigidbody2D.velocity = Vector2.up * forcaPulo;
         }
+        if (Input.GetKeyDown(KeyCode.UpArrow) && estaNoChao) {
+            oRigidbody2D.velocity = Vector2.up * forcaPulo;
+        }
     }
 
     void AtualizarAnimacoes() {
