@@ -10,6 +10,7 @@ public class sapinho : MonoBehaviour
     Animator animator;
     Transform currentPoint;
     public float speed = 1.3f;
+    public float pulo = 8f;
     public float pauseDuration = 0.8f; // Duração da pausa em segundos
     private SpriteRenderer oSpriteRenderer;
     private float pauseTimer = 0f; // Temporizador para a pausa

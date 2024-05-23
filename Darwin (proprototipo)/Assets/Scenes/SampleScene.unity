@@ -17693,7 +17693,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 466d2ee986c1d3648bf862b3918ddd47, type: 2}
+  - {fileID: 2100000, guid: 4308b0222e7d2974280822cacbc57f6b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -47044,7 +47044,7 @@ Transform:
   m_GameObject: {fileID: 564381306}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.18, y: -1.51, z: -0.04320344}
+  m_LocalPosition: {x: -19.78, y: -1.45, z: -0.04320344}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -47075,7 +47075,7 @@ Transform:
   m_GameObject: {fileID: 699258707}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.27, y: -1.51, z: -0.04320344}
+  m_LocalPosition: {x: -28, y: -1.51, z: -0.04320344}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -82935,9 +82935,10 @@ GameObject:
   - component: {fileID: 2051800332}
   - component: {fileID: 2051800331}
   - component: {fileID: 2051800330}
+  - component: {fileID: 2051800335}
   m_Layer: 0
   m_Name: sapo
-  m_TagString: Untagged
+  m_TagString: Sapo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82955,6 +82956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  pulo: 8
   pauseDuration: 2
 --- !u!95 &2051800331
 Animator:
@@ -83066,11 +83068,56 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -21.7, y: -1.04, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2051800335
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051800329}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.7666667, y: 1.4}
+    newSize: {x: 0.53, y: 0.42}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.53, y: 0.42}
+  m_EdgeRadius: 0
 --- !u!1001 &1431943354000001097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -83079,6 +83126,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3179590356659574477, guid: a0cbef9b6096cb548b51b0b66d5a7464, type: 3}
+      propertyPath: sapoPrefab
+      value: 
+      objectReference: {fileID: 6205835083213156091, guid: 15bf4e738fcf6e845a255fe191ef1743, type: 3}
     - target: {fileID: 6127314062362944569, guid: a0cbef9b6096cb548b51b0b66d5a7464, type: 3}
       propertyPath: m_Name
       value: prota
@@ -83263,6 +83314,6 @@ SceneRoots:
   - {fileID: 163809128}
   - {fileID: 162741505}
   - {fileID: 13530856}
+  - {fileID: 2051800334}
   - {fileID: 699258708}
   - {fileID: 564381307}
-  - {fileID: 2051800334}

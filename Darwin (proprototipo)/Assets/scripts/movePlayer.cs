@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class movePlayer : MonoBehaviour
 {
-    public float forcaPulo;
-    public float speedPlayer;
+    public float forcaPulo = 5f;
+    public float speedPlayer = 4f;
     private Rigidbody2D oRigidbody2D; 
     private SpriteRenderer oSpriteRenderer; // Parte do personagem que controla o sprite (olhar pra frente ou pra trás ou ficar de cabeça pra baixo)
     private bool estaNoChao;
@@ -14,6 +14,11 @@ public class movePlayer : MonoBehaviour
     private LayerMask layerDoChao;
     private Animator animator; // Troca de animações
     GameObject cameraPos;
+
+    public GameObject sapoPrefab; // Prefab do sapo
+    private GameObject sapoInstance; // Instância do sapo
+    private bool isSapo = false;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +41,10 @@ public class movePlayer : MonoBehaviour
         cameraPos.transform.position = new Vector3(cameraPos.transform.position.x, oRigidbody2D.transform.position.x, cameraPos.transform.position.z);
         cameraPos.transform.position = new Vector3(cameraPos.transform.position.y, oRigidbody2D.transform.position.y, cameraPos.transform.position.z);
 
+        if (Input.GetKeyDown(KeyCode.E)) // Troca de forma ao pressionar a tecla E
+        {
+            TrocarForma();
+        }
     }
     
     void FixedUpdate() { // A Unity às vezes buga sem isso pra movimentar o player
@@ -56,10 +65,7 @@ public class movePlayer : MonoBehaviour
     }
 
     public void pular() {
-        if (Input.GetKeyDown(KeyCode.Space) && estaNoChao) {
-            oRigidbody2D.velocity = Vector2.up * forcaPulo;
-        }
-        if (Input.GetKeyDown(KeyCode.UpArrow) && estaNoChao) {
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))&& estaNoChao) {
             oRigidbody2D.velocity = Vector2.up * forcaPulo;
         }
     }
@@ -72,4 +78,32 @@ public class movePlayer : MonoBehaviour
         float inputMove = Input.GetAxisRaw("Horizontal");
         animator.SetBool("taCorrendo", inputMove != 0);
     }
+
+    void TrocarForma()
+    {
+        isSapo = !isSapo; // Inverte o estado da forma
+
+        if (isSapo) // Se estiver na forma de sapo
+        {
+            // Desativa o script e o sprite do jogador principal
+            GetComponent<movePlayer>().enabled = false;
+            oSpriteRenderer.enabled = false;
+
+            // Instancia o sapo e guarda a referência
+            sapoInstance = Instantiate(sapoPrefab, transform.position, transform.rotation);
+        }
+        else // Se estiver na forma de jogador principal
+        {
+            // Destroi a instância do sapo
+            if (sapoInstance != null)
+            {
+                Destroy(sapoInstance);
+            }
+
+            // Ativa o script e o sprite do jogador principal
+            GetComponent<movePlayer>().enabled = true;
+            oSpriteRenderer.enabled = true;
+        }
+    }
+
 }
