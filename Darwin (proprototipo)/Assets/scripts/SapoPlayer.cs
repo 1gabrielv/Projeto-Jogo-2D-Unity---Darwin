@@ -47,11 +47,11 @@ public class SapoPlayer : MonoBehaviour
 
         if (inputMove > 0) 
         {
-            oSpriteRenderer.flipX = false; 
+            oSpriteRenderer.flipX = true; 
         }
         if (inputMove < 0) 
         {
-            oSpriteRenderer.flipX = true; 
+            oSpriteRenderer.flipX = false; 
         }
     }
 
