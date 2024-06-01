@@ -15,6 +15,7 @@ public class sapo : MonoBehaviour
     private float pauseTimer = 0f; // Temporizador para a pausa
     private bool isPaused = false; // Indica se o caracol está pausado
 
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();

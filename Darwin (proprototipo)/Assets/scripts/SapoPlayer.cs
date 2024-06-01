@@ -15,6 +15,11 @@ public class SapoPlayer : MonoBehaviour
     private Animator animator; 
     private GameObject cameraPos;
 
+
+    [SerializeField] private GameObject playerPrefab; // Prefab do sapo
+    private GameObject playerInstance; // Instância do sapo
+    private bool isPlayer = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +29,7 @@ public class SapoPlayer : MonoBehaviour
         layerDoChao = LayerMask.GetMask("chao"); 
         animator = GetComponent<Animator>();
         cameraPos = GameObject.Find("Main Camera");
+        playerPrefab = Resources.Load<GameObject>("prota");
     }
 
     // Update is called once per frame
@@ -32,6 +38,10 @@ public class SapoPlayer : MonoBehaviour
         estaNoChao = Physics2D.OverlapCircle(verificadorDeChao.position, raioDeVerificacao, layerDoChao);
         AtualizarAnimacoes();
         cameraPos.transform.position = new Vector3(transform.position.x, transform.position.y, cameraPos.transform.position.z);
+        if (Input.GetKeyDown(KeyCode.E)) // Troca de forma ao pressionar a tecla E
+        {
+            TrocarFormaPlayer();
+        }
     }
     
     void FixedUpdate() 
@@ -69,4 +79,11 @@ public class SapoPlayer : MonoBehaviour
         float inputMove = Input.GetAxisRaw("Horizontal");
         animator.SetBool("taCorrendo", inputMove != 0);
     }
+
+    void TrocarFormaPlayer()
+    {
+            playerInstance = Instantiate(playerPrefab, transform.position, transform.rotation);
+            Destroy(gameObject);
+    }
+
 }

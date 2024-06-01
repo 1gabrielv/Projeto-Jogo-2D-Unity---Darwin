@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SnailPlayer : MonoBehaviour
+public class GatoPlayer : MonoBehaviour
 {
     public float speedPlayer = 3.8f;
     private Rigidbody2D oRigidbody2D; 
@@ -17,6 +17,7 @@ public class SnailPlayer : MonoBehaviour
     [SerializeField] private GameObject playerPrefab; // Prefab do sapo
     private GameObject playerInstance; // Instância do sapo
     private bool isPlayer = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,11 +54,11 @@ public class SnailPlayer : MonoBehaviour
 
         if (inputMove > 0) 
         {
-            oSpriteRenderer.flipX = true; 
+            oSpriteRenderer.flipX = false; 
         }
         if (inputMove < 0) 
         {
-            oSpriteRenderer.flipX = false; 
+            oSpriteRenderer.flipX = true; 
         }
     }
 
@@ -72,4 +73,3 @@ public class SnailPlayer : MonoBehaviour
             Destroy(gameObject);
     }
 }
-

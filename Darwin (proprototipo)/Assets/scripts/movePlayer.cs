@@ -15,9 +15,25 @@ public class movePlayer : MonoBehaviour
     private Animator animator; // Troca de animações
     GameObject cameraPos;
 
-    public GameObject sapoPrefab; // Prefab do sapo
+    //para a transformação do sapo
+    [SerializeField] private GameObject sapoPrefab; // Prefab do sapo
     private GameObject sapoInstance; // Instância do sapo
     private bool isSapo = false;
+
+    //para a transformação do caracol
+    [SerializeField] private GameObject caracolPrefab; // Prefab do sapo
+    private GameObject caracolInstance; // Instância do sapo
+    private bool isCaracol = false;
+
+    //para a transformação do gato
+    [SerializeField] private GameObject gatoPrefab; // Prefab do sapo
+    private GameObject gatoInstance; // Instância do sapo
+    private bool isGato = false;
+
+    //para a transformação do javali
+    [SerializeField] private GameObject javaliPrefab; // Prefab do sapo
+    private GameObject javaliInstance; // Instância do sapo
+    private bool isJavali = false;
     
 
     // Start is called before the first frame update
@@ -31,6 +47,11 @@ public class movePlayer : MonoBehaviour
         layerDoChao = LayerMask.GetMask("chao"); // Define a LayerMask para o layer "chao"
         animator = GetComponent<Animator>();
         cameraPos = GameObject.Find("Main Camera");
+        sapoPrefab = Resources.Load<GameObject>("sapoplayer");
+        gatoPrefab = Resources.Load<GameObject>("gatoplayer");
+        caracolPrefab = Resources.Load<GameObject>("caracolplayer");
+        javaliPrefab = Resources.Load<GameObject>("javaliplayer");
+
     }
 
     // Update is called once per frame
@@ -41,9 +62,24 @@ public class movePlayer : MonoBehaviour
         cameraPos.transform.position = new Vector3(cameraPos.transform.position.x, oRigidbody2D.transform.position.x, cameraPos.transform.position.z);
         cameraPos.transform.position = new Vector3(cameraPos.transform.position.y, oRigidbody2D.transform.position.y, cameraPos.transform.position.z);
 
-        if (Input.GetKeyDown(KeyCode.E)) // Troca de forma ao pressionar a tecla E
+        if (Input.GetKeyDown(KeyCode.E) && isSapo == true) // Troca de forma ao pressionar a tecla E
         {
-            TrocarForma();
+            TrocarFormaSapo();
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && isGato == true) // Troca de forma ao pressionar a tecla E
+        {
+            TrocarFormaGato();
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && isCaracol == true) // Troca de forma ao pressionar a tecla E
+        {
+            TrocarFormaCaracol();
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && isJavali == true) // Troca de forma ao pressionar a tecla E
+        {
+            TrocarFormaJavali();
         }
     }
     
@@ -78,32 +114,86 @@ public class movePlayer : MonoBehaviour
         float inputMove = Input.GetAxisRaw("Horizontal");
         animator.SetBool("taCorrendo", inputMove != 0);
     }
-
-    void TrocarForma()
+    void OnTriggerEnter2D(Collider2D other)
+{
+    if (other.CompareTag("Sapo"))
     {
-        isSapo = !isSapo; // Inverte o estado da forma
+        isSapo = true;
+    }
+    else
+    {
+        isSapo = false;
+    }
 
-        if (isSapo) // Se estiver na forma de sapo
-        {
-            // Desativa o script e o sprite do jogador principal
-            GetComponent<movePlayer>().enabled = false;
-            oSpriteRenderer.enabled = false;
+    if (other.CompareTag("caracol"))
+    {
+        isCaracol = true;
+    }
 
-            // Instancia o sapo e guarda a referência
-            sapoInstance = Instantiate(sapoPrefab, transform.position, transform.rotation);
-        }
-        else // Se estiver na forma de jogador principal
-        {
-            // Destroi a instância do sapo
-            if (sapoInstance != null)
-            {
-                Destroy(sapoInstance);
-            }
+    else
+    {
+        isCaracol = false;
+    }
+    if (other.CompareTag("gato"))
+    {
+        isGato = true;
+    }
+    else
+    {
+        isGato = false;
+    }
 
-            // Ativa o script e o sprite do jogador principal
-            GetComponent<movePlayer>().enabled = true;
-            oSpriteRenderer.enabled = true;
-        }
+    if (other.CompareTag("javali"))
+    {
+        isJavali = true;
+    }
+
+    else
+    {
+        isJavali = false;
+    }
+}
+
+
+
+    void TrocarFormaSapo()
+    {
+ 
+        // Instancia o novo prefab
+        sapoInstance = Instantiate(sapoPrefab, transform.position, transform.rotation);
+        // Destrói o personagem atual
+        Destroy(gameObject);
+
+    }
+
+    void TrocarFormaGato()
+    {
+ 
+        // Instancia o novo prefab
+        gatoInstance = Instantiate(gatoPrefab, transform.position, transform.rotation);
+        // Destrói o personagem atual
+        Destroy(gameObject);
+
+    }
+
+    void TrocarFormaCaracol()
+    {
+ 
+        // Instancia o novo prefab
+        caracolInstance = Instantiate(caracolPrefab, transform.position, transform.rotation);
+        // Destrói o personagem atual
+        Destroy(gameObject);
+
+    }
+
+    void TrocarFormaJavali()
+    {
+ 
+        // Instancia o novo prefab
+        javaliInstance = Instantiate(javaliPrefab, transform.position, transform.rotation);
+        // Destrói o personagem atual
+        Destroy(gameObject);
+
     }
 
 }

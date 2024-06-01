@@ -6,6 +6,10 @@ TagManager:
   tags:
   - caixa
   - Sapo
+  - player
+  - caracol
+  - javali
+  - gato
   layers:
   - Default
   - TransparentFX
