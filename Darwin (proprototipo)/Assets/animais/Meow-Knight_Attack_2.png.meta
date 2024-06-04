@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 06b6448274912a64f86913866f22c370
+guid: 451306a9aea872444bf0e1d0f6a145a5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,34 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Run-Sheet_0
+      name: Meow-Knight_Attack_2_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 110
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b346083db6780d147a85db0f482883ba
+      internalID: -1065308861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow-Knight_Attack_2_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 48
-        height: 32
+        y: 68
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85c6a0ff9bbdfd6459aa4aad09b7f330
-      internalID: 1142548840
+      spriteID: f6484777ca86ada4eac87350bdd1ace8
+      internalID: 1036862418
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run-Sheet_1
+      name: Meow-Knight_Attack_2_2
       rect:
         serializedVersion: 2
-        x: 48
-        y: 0
-        width: 48
-        height: 32
+        x: 3
+        y: 26
+        width: 31
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20070045b053846459134896264ea60d
-      internalID: 1767857994
+      spriteID: eb5d0d8f6834a174b98d2695277ac153
+      internalID: -1264901363
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run-Sheet_2
+      name: Meow-Knight_Attack_2_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 2
         y: 0
-        width: 48
-        height: 32
+        width: 35
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,71 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 925e3ca7f29ae744394ba0071ffbc92d
-      internalID: -1469483492
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Run-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 48
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 101b7e90026d0f245a69c5a3850688e7
-      internalID: 2060904356
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Run-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 48
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a571bd9db3a9064c9ad9ebc582050bd
-      internalID: 1274021028
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Run-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 0
-        width: 48
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: de419cdcc470fee4287deb9ce406ada9
-      internalID: 371965673
+      spriteID: 8ef19ab895db11442bd2754f6eede9ae
+      internalID: -1131424571
       vertices: []
       indices: 
       edges: []
@@ -246,12 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Run-Sheet_0: 1142548840
-      Run-Sheet_1: 1767857994
-      Run-Sheet_2: -1469483492
-      Run-Sheet_3: 2060904356
-      Run-Sheet_4: 1274021028
-      Run-Sheet_5: 371965673
+      Meow-Knight_Attack_2_0: -1065308861
+      Meow-Knight_Attack_2_1: 1036862418
+      Meow-Knight_Attack_2_2: -1264901363
+      Meow-Knight_Attack_2_3: -1131424571
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

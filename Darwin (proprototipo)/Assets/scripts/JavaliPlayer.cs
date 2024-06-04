@@ -3,26 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class JavaliPlayer : MonoBehaviour
-{public float speedPlayer = 3.8f;
-    private Rigidbody2D oRigidbody2D; 
-    private SpriteRenderer oSpriteRenderer; 
+{
+    public float speedPlayer = 3.8f;
+    private Rigidbody2D oRigidbody2D;
+    private SpriteRenderer oSpriteRenderer;
     private bool estaNoChao;
-    private Transform verificadorDeChao; 
+    private Transform verificadorDeChao;
     public float raioDeVerificacao;
     private LayerMask layerDoChao;
-    private Animator animator; 
+    private Animator animator;
     private GameObject cameraPos;
 
     [SerializeField] private GameObject playerPrefab; // Prefab do sapo
     private GameObject playerInstance; // Instância do sapo
     private bool isPlayer = false;
+
+    // Velocidade de corrida
+    public float speedRun = 5.3f;
+
     // Start is called before the first frame update
     void Start()
     {
-        oRigidbody2D = GetComponent<Rigidbody2D>(); 
-        oSpriteRenderer = GetComponent<SpriteRenderer>(); 
-        verificadorDeChao = transform.Find("verificarChao"); 
-        layerDoChao = LayerMask.GetMask("chao"); 
+        oRigidbody2D = GetComponent<Rigidbody2D>();
+        oSpriteRenderer = GetComponent<SpriteRenderer>();
+        verificadorDeChao = transform.Find("verificarChao");
+        layerDoChao = LayerMask.GetMask("chao");
         animator = GetComponent<Animator>();
         cameraPos = GameObject.Find("Main Camera");
         playerPrefab = Resources.Load<GameObject>("prota");
@@ -38,36 +43,60 @@ public class JavaliPlayer : MonoBehaviour
         {
             TrocarFormPlayer();
         }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Corrida();
+        }
     }
 
-    void FixedUpdate() 
-        {
-            moveplayer();
-        }
+    void FixedUpdate()
+    {
+        moveplayer();
+    }
 
-    public void moveplayer() 
-    { 
+    public void moveplayer()
+    {
         float inputMove = Input.GetAxisRaw("Horizontal");
         oRigidbody2D.velocity = new Vector2(inputMove * speedPlayer, oRigidbody2D.velocity.y);
 
-        if (inputMove > 0) 
+        if (inputMove > 0)
         {
-            oSpriteRenderer.flipX = true; 
+            oSpriteRenderer.flipX = true;
         }
-        if (inputMove < 0) 
+        else if (inputMove < 0)
         {
-            oSpriteRenderer.flipX = false; 
+            oSpriteRenderer.flipX = false;
+        }
+        else
+        {
+            // Se o jogador não estiver pressionando nenhuma tecla de movimento,
+            // defina a velocidade de volta ao normal e desative a animação de corrida
+            speedPlayer = 3.8f;
+            animator.SetBool("corrida", false);
         }
     }
 
-    void AtualizarAnimacoes() 
+    void AtualizarAnimacoes()
     {
         float inputMove = Input.GetAxisRaw("Horizontal");
         animator.SetBool("taCorrendo", inputMove != 0);
     }
+
     void TrocarFormPlayer()
     {
-            playerInstance = Instantiate(playerPrefab, transform.position, transform.rotation);
-            Destroy(gameObject);
+        playerInstance = Instantiate(playerPrefab, transform.position, transform.rotation);
+        Destroy(gameObject);
+    }
+
+    void Corrida()
+    {
+        speedPlayer = speedRun; // Define a velocidade para a velocidade de corrida
+        animator.SetBool("corrida", true); // Ativa a animação de corrida
+    }
+
+    void OnTriggerEnter2D(Collider2D col) {
+        if(col.CompareTag("caixa") && animator.GetBool("corrida")){
+            Destroy(col.gameObject);
+        }
     }
 }

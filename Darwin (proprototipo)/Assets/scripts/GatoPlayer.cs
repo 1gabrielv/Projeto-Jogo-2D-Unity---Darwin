@@ -18,6 +18,12 @@ public class GatoPlayer : MonoBehaviour
     private GameObject playerInstance; // Instância do sapo
     private bool isPlayer = false;
 
+    // ataque
+    private bool isAttacking = false; // Variável para verificar se o personagem está atacando
+    private int numAttack = 0;
+     // hitbox de ataque
+    private GameObject attackHitbox;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +34,12 @@ public class GatoPlayer : MonoBehaviour
         animator = GetComponent<Animator>();
         cameraPos = GameObject.Find("Main Camera");
         playerPrefab = Resources.Load<GameObject>("prota");
+        // Encontrar a hitbox de ataque
+        attackHitbox = transform.Find("attack").gameObject;
+        
+        // Certifique-se de que a hitbox está desativada no início
+        attackHitbox.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -36,17 +48,39 @@ public class GatoPlayer : MonoBehaviour
         estaNoChao = Physics2D.OverlapCircle(verificadorDeChao.position, raioDeVerificacao, layerDoChao);
         AtualizarAnimacoes();
         cameraPos.transform.position = new Vector3(transform.position.x, transform.position.y, cameraPos.transform.position.z);
+        
         if (Input.GetKeyDown(KeyCode.E)) // Troca de forma ao pressionar a tecla E
         {
             TrocarFormPlayer();
         }
+
+        if (Input.GetKeyDown(KeyCode.Space) && !isAttacking) // Permitir ataque apenas se não estiver atacando
+        {
+            attack();
+        }
     }
 
     void FixedUpdate() 
-        {
-            moveplayer();
-        }
+{
+    if (!isAttacking) // Permitir movimento apenas se não estiver atacando
+    {
+        moveplayer();
+    }
+    else
+    {
+        oRigidbody2D.velocity = new Vector2(0, oRigidbody2D.velocity.y); // Impedir movimento
+    }
 
+    // Atualizar a posição da hitbox de ataque com base na direção do personagem
+    if (!oSpriteRenderer.flipX)
+    {
+        attackHitbox.transform.localPosition = new Vector3(1f, 0f, 0f); // Posição quando o personagem está virado para a direita
+    }
+    else
+    {
+        attackHitbox.transform.localPosition = new Vector3(-1f, 0f, 0f); // Posição quando o personagem está virado para a esquerda
+    }
+}
     public void moveplayer() 
     { 
         float inputMove = Input.GetAxisRaw("Horizontal");
@@ -65,11 +99,40 @@ public class GatoPlayer : MonoBehaviour
     void AtualizarAnimacoes() 
     {
         float inputMove = Input.GetAxisRaw("Horizontal");
-        animator.SetBool("taCorrendo", inputMove != 0);
+        animator.SetBool("taCorrendo", inputMove != 0 && !isAttacking); // Não permitir animação de corrida durante ataque
     }
+
     void TrocarFormPlayer()
     {
-            playerInstance = Instantiate(playerPrefab, transform.position, transform.rotation);
-            Destroy(gameObject);
+        playerInstance = Instantiate(playerPrefab, transform.position, transform.rotation);
+        Destroy(gameObject);
+    }
+
+    void attack() 
+    {
+        isAttacking = true; // Definir como atacando
+
+        if (numAttack == 0) 
+        {
+            animator.SetBool("taBatendo1", true);
+            attackHitbox.SetActive(true); // Ativar a hitbox de ataque
+            StartCoroutine(ResetAttack("taBatendo1"));
+            numAttack = 1;
+        } 
+        else if (numAttack == 1) 
+        {
+            animator.SetBool("taBatendo2", true);
+            attackHitbox.SetActive(true); // Ativar a hitbox de ataque
+            StartCoroutine(ResetAttack("taBatendo2"));
+            numAttack = 0;
+        }
+    }
+
+    IEnumerator ResetAttack(string attackBool) 
+    {
+        yield return new WaitForSeconds(0.5f); // Tempo suficiente para a animação de ataque ser executada
+        animator.SetBool(attackBool, false);
+        attackHitbox.SetActive(false); // Desativar a hitbox de ataque
+        isAttacking = false; // Definir como não atacando após a animação
     }
 }

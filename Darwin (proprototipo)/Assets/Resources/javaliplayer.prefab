@@ -193,7 +193,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &6763067548826884391
 Animator:
   serializedVersion: 5
@@ -230,6 +230,7 @@ MonoBehaviour:
   speedPlayer: 3.8
   raioDeVerificacao: 0
   playerPrefab: {fileID: 0}
+  speedRun: 5.3
 --- !u!1 &6566711158855817763
 GameObject:
   m_ObjectHideFlags: 0
