@@ -10,6 +10,8 @@ TagManager:
   - caracol
   - javali
   - gato
+  - Armadilhas
+  - pontoM
   layers:
   - Default
   - TransparentFX
