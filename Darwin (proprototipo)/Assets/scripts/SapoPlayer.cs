@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SapoPlayer : MonoBehaviour
 {
-    public float forcaPulo = 8f;
+    public float forcaPulo = 12f;
     public float speedPlayer = 3f;
     private Rigidbody2D oRigidbody2D; 
     private SpriteRenderer oSpriteRenderer; 

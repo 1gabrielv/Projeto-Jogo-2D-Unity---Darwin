@@ -6,7 +6,6 @@ public class Spikes : MonoBehaviour
 {
     GameObject parede;
     GameObject pB;
-    public bool encostou = false;
     public float speed = 0.15f; // Velocidade de movimento ajustável
 
     // Start é chamado antes do primeiro quadro de atualização
@@ -22,7 +21,7 @@ public class Spikes : MonoBehaviour
     {
         // Verifica se o jogador encostou no ponto boneco 
                 // Move o GameObject atual em direção ao ponto B
-                transform.position = Vector3.MoveTowards(transform.position, pB.transform.position, speed * Time.deltaTime);
-
+                
+                    transform.position = Vector3.MoveTowards(transform.position, pB.transform.position, speed * Time.deltaTime);
     }
 }

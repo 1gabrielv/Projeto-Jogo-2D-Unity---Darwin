@@ -170,7 +170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &7104359
 CapsuleCollider2D:
@@ -407,7 +406,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &7995743
 PolygonCollider2D:
@@ -645,7 +643,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &15539569
 PolygonCollider2D:
@@ -891,7 +888,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &28873622
 PolygonCollider2D:
@@ -1093,7 +1089,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &29938384
 PolygonCollider2D:
@@ -1294,7 +1289,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &93881723
 CapsuleCollider2D:
@@ -1541,7 +1535,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &94417364
 PolygonCollider2D:
@@ -1743,7 +1736,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &100723996
 PolygonCollider2D:
@@ -1955,7 +1947,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &102096446
 PolygonCollider2D:
@@ -2122,7 +2113,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &104588137
 CapsuleCollider2D:
@@ -2359,7 +2349,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &107921203
 PolygonCollider2D:
@@ -2571,7 +2560,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &117468958
 PolygonCollider2D:
@@ -3420,7 +3408,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &171139290
 PolygonCollider2D:
@@ -3666,7 +3653,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &196745079
 PolygonCollider2D:
@@ -3951,7 +3937,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &199297531
 CapsuleCollider2D:
@@ -4035,7 +4020,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &216079216
 CapsuleCollider2D:
@@ -4282,7 +4266,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &235854889
 PolygonCollider2D:
@@ -4449,7 +4432,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &240170766
 CapsuleCollider2D:
@@ -4747,7 +4729,7 @@ Transform:
   m_GameObject: {fileID: 277799381}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.87, y: 8.45, z: 0}
+  m_LocalPosition: {x: 22.87, y: -3.9, z: 0}
   m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4872,7 +4854,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &280355420
 CapsuleCollider2D:
@@ -5154,7 +5135,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &297158922
 PolygonCollider2D:
@@ -5356,7 +5336,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &307188214
 PolygonCollider2D:
@@ -5676,7 +5655,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &375534702
 PolygonCollider2D:
@@ -5888,7 +5866,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &383538242
 PolygonCollider2D:
@@ -6090,7 +6067,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &411414343
 PolygonCollider2D:
@@ -6292,7 +6268,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &422389070
 PolygonCollider2D:
@@ -6504,7 +6479,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &424432252
 PolygonCollider2D:
@@ -6706,7 +6680,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &430671396
 PolygonCollider2D:
@@ -6873,7 +6846,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &434268270
 CapsuleCollider2D:
@@ -7232,7 +7204,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &461859140
 PolygonCollider2D:
@@ -7444,7 +7415,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &466398107
 PolygonCollider2D:
@@ -7656,7 +7626,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &484107910
 PolygonCollider2D:
@@ -7936,7 +7905,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &503479564
 PolygonCollider2D:
@@ -8172,7 +8140,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &531690128
 PolygonCollider2D:
@@ -8502,7 +8469,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &543844246
 PolygonCollider2D:
@@ -8714,7 +8680,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &582000201
 PolygonCollider2D:
@@ -8960,7 +8925,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &594576871
 PolygonCollider2D:
@@ -9162,7 +9126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &605651324
 PolygonCollider2D:
@@ -9423,7 +9386,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &645429973
 PolygonCollider2D:
@@ -9590,7 +9552,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &649473736
 CapsuleCollider2D:
@@ -9973,7 +9934,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &665164968
 PolygonCollider2D:
@@ -10209,7 +10169,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &686308079
 PolygonCollider2D:
@@ -10410,7 +10369,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &707216514
 CapsuleCollider2D:
@@ -10612,7 +10570,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &710158849
 CapsuleCollider2D:
@@ -10893,7 +10850,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &726396822
 PolygonCollider2D:
@@ -11060,7 +11016,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &733056280
 CapsuleCollider2D:
@@ -11341,7 +11296,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &742548762
 PolygonCollider2D:
@@ -11577,7 +11531,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &745769750
 PolygonCollider2D:
@@ -11905,7 +11858,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &761155875
 PolygonCollider2D:
@@ -12072,7 +12024,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &762352345
 CapsuleCollider2D:
@@ -12342,7 +12293,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &795432728
 CapsuleCollider2D:
@@ -12578,7 +12528,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &823765898
 CapsuleCollider2D:
@@ -12780,7 +12729,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &840622428
 CapsuleCollider2D:
@@ -13017,7 +12965,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &841034157
 PolygonCollider2D:
@@ -13184,7 +13131,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &845496992
 CapsuleCollider2D:
@@ -13386,7 +13332,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &849490214
 CapsuleCollider2D:
@@ -17395,7 +17340,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &873282875
 CapsuleCollider2D:
@@ -17632,7 +17576,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &876440051
 PolygonCollider2D:
@@ -17878,7 +17821,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &928118314
 PolygonCollider2D:
@@ -18080,7 +18022,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &930192405
 PolygonCollider2D:
@@ -18292,7 +18233,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &951661078
 PolygonCollider2D:
@@ -19506,7 +19446,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &971697296
 PolygonCollider2D:
@@ -19708,7 +19647,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &988089637
 PolygonCollider2D:
@@ -19910,7 +19848,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &995331897
 PolygonCollider2D:
@@ -20111,7 +20048,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &1015025866
 CapsuleCollider2D:
@@ -20348,7 +20284,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1024807590
 PolygonCollider2D:
@@ -20560,7 +20495,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1025792388
 PolygonCollider2D:
@@ -20772,7 +20706,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1065864494
 PolygonCollider2D:
@@ -20973,7 +20906,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &1107906611
 CapsuleCollider2D:
@@ -21241,7 +21173,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1146841385
 PolygonCollider2D:
@@ -21561,7 +21492,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!1 &1182113748
 GameObject:
@@ -21655,7 +21585,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1182113752
 PolygonCollider2D:
@@ -21867,7 +21796,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1188710149
 PolygonCollider2D:
@@ -22034,7 +21962,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &1197245601
 CapsuleCollider2D:
@@ -22561,7 +22488,7 @@ Transform:
   m_GameObject: {fileID: 1268800220}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4, y: 4.3, z: 0}
+  m_LocalPosition: {x: -109.2, y: 4.3, z: 0}
   m_LocalScale: {x: 30, y: 40, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22581,7 +22508,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!1 &1281484886
 GameObject:
@@ -22665,7 +22591,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1281484890
 PolygonCollider2D:
@@ -22877,7 +22802,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1285685019
 PolygonCollider2D:
@@ -23079,7 +23003,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1299647599
 PolygonCollider2D:
@@ -23325,7 +23248,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1307716322
 PolygonCollider2D:
@@ -23537,7 +23459,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1314213143
 PolygonCollider2D:
@@ -23704,7 +23625,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &1317380215
 CapsuleCollider2D:
@@ -23941,7 +23861,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1317386803
 PolygonCollider2D:
@@ -24226,7 +24145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!61 &1323467150
 BoxCollider2D:
@@ -24365,7 +24283,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1329078015
 PolygonCollider2D:
@@ -24577,7 +24494,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1333214756
 PolygonCollider2D:
@@ -24731,208 +24647,6 @@ Transform:
   - {fileID: 1940771903}
   m_Father: {fileID: 665090916}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!1 &1335232744
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1335232745}
-  - component: {fileID: 1335232749}
-  - component: {fileID: 1335232748}
-  - component: {fileID: 1335232747}
-  - component: {fileID: 1335232746}
-  m_Layer: 0
-  m_Name: long_metal_spike_04 (1)
-  m_TagString: Armadilhas
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1335232745
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1335232744}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.17887752, w: 0.9838714}
-  m_LocalPosition: {x: -1.94, y: -7.69, z: 0.15074344}
-  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1657089389}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -20.609}
---- !u!114 &1335232746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1335232744}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  encostou: 0
-  speed: 5
---- !u!70 &1335232747
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1335232744}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.010571109, y: 0.20876294}
-  m_Size: {x: 0.34527713, y: 0.74247134}
-  m_Direction: 0
---- !u!60 &1335232748
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1335232744}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.78, y: 1.16}
-    newSize: {x: 0.78, y: 1.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.35, y: -0.45}
-      - {x: 0.32, y: -0.38}
-      - {x: 0.21, y: -0.28}
-      - {x: 0.19999999, y: -0.19}
-      - {x: 0.17999999, y: -0.14}
-      - {x: 0.11, y: 0.22}
-      - {x: 0.04, y: 0.53}
-      - {x: 0.02, y: 0.58}
-      - {x: -0.02, y: 0.58}
-      - {x: -0.06, y: 0.5}
-      - {x: -0.089999996, y: 0.32}
-      - {x: -0.19999999, y: -0.25}
-      - {x: -0.26, y: -0.32999998}
-      - {x: -0.34, y: -0.42}
-      - {x: -0.35999998, y: -0.51}
-      - {x: -0.32999998, y: -0.55}
-      - {x: -0.26, y: -0.58}
-      - {x: 0.24, y: -0.58}
-      - {x: 0.31, y: -0.57}
-      - {x: 0.35999998, y: -0.52}
-      - {x: 0.35999998, y: -0.48999998}
-  m_UseDelaunayMesh: 0
---- !u!212 &1335232749
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1335232744}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: b420f6a0707e4a34fb8413b9d6d8764e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.78, y: 1.16}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &1343739941
 GameObject:
   m_ObjectHideFlags: 0
@@ -25015,7 +24729,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1343739945
 PolygonCollider2D:
@@ -25217,7 +24930,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1363615312
 PolygonCollider2D:
@@ -25429,7 +25141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1366323554
 PolygonCollider2D:
@@ -25671,7 +25382,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1381896513
 PolygonCollider2D:
@@ -25838,7 +25548,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &1383269081
 CapsuleCollider2D:
@@ -26109,7 +25818,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1384296429
 PolygonCollider2D:
@@ -26321,7 +26029,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1390545472
 PolygonCollider2D:
@@ -26488,7 +26195,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &1392618015
 CapsuleCollider2D:
@@ -26690,7 +26396,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &1417684820
 CapsuleCollider2D:
@@ -26926,7 +26631,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &1439975526
 CapsuleCollider2D:
@@ -27163,7 +26867,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1447153879
 PolygonCollider2D:
@@ -27365,7 +27068,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1461886928
 PolygonCollider2D:
@@ -27532,7 +27234,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &1469788080
 CapsuleCollider2D:
@@ -27734,7 +27435,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &1476470526
 CapsuleCollider2D:
@@ -27981,7 +27681,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1476714558
 PolygonCollider2D:
@@ -28227,7 +27926,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1489652840
 PolygonCollider2D:
@@ -28473,7 +28171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1499524051
 PolygonCollider2D:
@@ -28593,157 +28290,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1500205210
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1500205213}
-  - component: {fileID: 1500205212}
-  - component: {fileID: 1500205211}
-  m_Layer: 0
-  m_Name: long_metal_spike_04
-  m_TagString: pontoM
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!60 &1500205211
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1500205210}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.78, y: 1.16}
-    newSize: {x: 0.78, y: 1.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.35, y: -0.45}
-      - {x: 0.32, y: -0.38}
-      - {x: 0.21, y: -0.28}
-      - {x: 0.19999999, y: -0.19}
-      - {x: 0.17999999, y: -0.14}
-      - {x: 0.11, y: 0.22}
-      - {x: 0.04, y: 0.53}
-      - {x: 0.02, y: 0.58}
-      - {x: -0.02, y: 0.58}
-      - {x: -0.06, y: 0.5}
-      - {x: -0.089999996, y: 0.32}
-      - {x: -0.19999999, y: -0.25}
-      - {x: -0.26, y: -0.32999998}
-      - {x: -0.34, y: -0.42}
-      - {x: -0.35999998, y: -0.51}
-      - {x: -0.32999998, y: -0.55}
-      - {x: -0.26, y: -0.58}
-      - {x: 0.24, y: -0.58}
-      - {x: 0.31, y: -0.57}
-      - {x: 0.35999998, y: -0.52}
-      - {x: 0.35999998, y: -0.48999998}
-  m_UseDelaunayMesh: 0
---- !u!212 &1500205212
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1500205210}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b420f6a0707e4a34fb8413b9d6d8764e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.78, y: 1.16}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1500205213
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1500205210}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.8, y: 12.3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1501407849
 GameObject:
   m_ObjectHideFlags: 0
@@ -28791,7 +28337,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &1501407852
 CapsuleCollider2D:
@@ -28993,7 +28538,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &1502771105
 CapsuleCollider2D:
@@ -29240,7 +28784,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1516492498
 PolygonCollider2D:
@@ -29452,7 +28995,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1540822464
 PolygonCollider2D:
@@ -29664,7 +29206,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1566048360
 PolygonCollider2D:
@@ -29831,7 +29372,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &1581139154
 CapsuleCollider2D:
@@ -30068,7 +29608,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1586906265
 PolygonCollider2D:
@@ -30235,7 +29774,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &1606561267
 CapsuleCollider2D:
@@ -30437,7 +29975,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &1608372999
 CapsuleCollider2D:
@@ -30684,7 +30221,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1644793544
 PolygonCollider2D:
@@ -30868,7 +30404,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1329078012}
-  - {fileID: 1335232745}
   - {fileID: 745769747}
   m_Father: {fileID: 665090916}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
@@ -31003,7 +30538,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &1661939520
 CapsuleCollider2D:
@@ -31205,7 +30739,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &1676699071
 CapsuleCollider2D:
@@ -31442,7 +30975,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1685174615
 PolygonCollider2D:
@@ -31644,7 +31176,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1717906394
 PolygonCollider2D:
@@ -31856,7 +31387,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1726547942
 PolygonCollider2D:
@@ -32092,7 +31622,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1746108254
 PolygonCollider2D:
@@ -32362,7 +31891,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1771323187
 PolygonCollider2D:
@@ -32598,7 +32126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1797332010
 PolygonCollider2D:
@@ -32800,7 +32327,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1806440661
 PolygonCollider2D:
@@ -32967,7 +32493,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &1809969533
 CapsuleCollider2D:
@@ -33204,7 +32729,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1821767585
 PolygonCollider2D:
@@ -33406,7 +32930,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1829617635
 PolygonCollider2D:
@@ -33573,7 +33096,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &1850425897
 CapsuleCollider2D:
@@ -33820,7 +33342,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1850781686
 PolygonCollider2D:
@@ -34022,7 +33543,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1868543379
 PolygonCollider2D:
@@ -34189,7 +33709,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &1914680562
 CapsuleCollider2D:
@@ -34391,7 +33910,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &1932359082
 CapsuleCollider2D:
@@ -34628,7 +34146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1940771906
 PolygonCollider2D:
@@ -34830,7 +34347,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1948874218
 PolygonCollider2D:
@@ -35031,7 +34547,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &1973077748
 CapsuleCollider2D:
@@ -35312,7 +34827,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &1996650843
 PolygonCollider2D:
@@ -35513,7 +35027,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &2039474166
 CapsuleCollider2D:
@@ -35715,7 +35228,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &2048472655
 CapsuleCollider2D:
@@ -35996,7 +35508,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &2063195426
 PolygonCollider2D:
@@ -36163,7 +35674,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &2073469406
 CapsuleCollider2D:
@@ -36365,7 +35875,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!70 &2084820803
 CapsuleCollider2D:
@@ -37011,7 +36520,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &2105911753
 PolygonCollider2D:
@@ -37223,7 +36731,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &2109309253
 PolygonCollider2D:
@@ -37435,7 +36942,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc3351096f32541a685406f14f4c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encostou: 0
   speed: 5
 --- !u!60 &2132169319
 PolygonCollider2D:
@@ -37566,4 +37072,3 @@ SceneRoots:
   - {fileID: 1369564611}
   - {fileID: 1141604339}
   - {fileID: 1268800222}
-  - {fileID: 1500205213}

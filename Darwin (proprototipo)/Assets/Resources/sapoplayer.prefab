@@ -181,7 +181,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 60fd8dbb56231964fa579a187327fbd8, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -225,6 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2370a9049f2b8c74eac4284a9e347ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forcaPulo: 8
-  speedPlayer: 3
+  forcaPulo: 12
+  speedPlayer: 4.5
   raioDeVerificacao: 1
+  playerPrefab: {fileID: 0}

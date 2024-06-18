@@ -19,7 +19,6 @@ public class Player : MonoBehaviour
         rbplayer = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         cameraPos = GameObject.Find("Main Camera");
-
         
     }
 
@@ -70,12 +69,12 @@ public class Player : MonoBehaviour
     if (collision.gameObject.name == "Ground" || collision.gameObject.name == "esquerda" || collision.gameObject.name == "direita")
     {
         Infloor = true;
-        jumpforce = 6.5f;  // Certifique-se de definir o valor correto para cada caso
+        jumpforce = 8f;  // Certifique-se de definir o valor correto para cada caso
     }
     if(collision.gameObject.name == "Wall")
     {
         Infloor = true;
-        jumpforce = 7.7f;
+        jumpforce = 8f;
     }
     
     if (collision.gameObject.CompareTag("Armadilhas"))
@@ -91,7 +90,7 @@ public class Player : MonoBehaviour
     }
 }
 
-    void AtualizarAnimacoes()
+       void AtualizarAnimacoes()
     {
         if (!isDead)  // Atualiza animações apenas se não estiver morto
         {
