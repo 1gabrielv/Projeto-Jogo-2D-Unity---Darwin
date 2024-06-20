@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3884494574931898389}
   - component: {fileID: 2732010764460667598}
   - component: {fileID: 3773774777341039980}
-  - component: {fileID: 2074142402513316371}
+  - component: {fileID: 5769755484708524318}
   m_Layer: 0
   m_Name: gato
   m_TagString: Untagged
@@ -135,7 +135,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2074142402513316371
+--- !u!114 &5769755484708524318
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4258663729646437849}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afa3fd52ec1ce014e89ee55a11aebb47, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fbf4f4a2566e1e48b11610d2c1cc662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.3

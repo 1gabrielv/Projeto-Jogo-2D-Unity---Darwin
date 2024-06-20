@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class movePlayer : MonoBehaviour
 {
+ 
     public float forcaPulo = 5f;
     public float speedPlayer = 4f;
     private Rigidbody2D oRigidbody2D; 

@@ -94,8 +94,8 @@ public class JavaliPlayer : MonoBehaviour
         animator.SetBool("corrida", true); // Ativa a animação de corrida
     }
 
-    void OnTriggerEnter2D(Collider2D col) {
-        if(col.CompareTag("caixa") && animator.GetBool("corrida")){
+    private void OnCollisionEnter2D(Collision2D col) {
+        if(col.gameObject.CompareTag("caixa") && animator.GetBool("corrida")){
             Destroy(col.gameObject);
         }
     }

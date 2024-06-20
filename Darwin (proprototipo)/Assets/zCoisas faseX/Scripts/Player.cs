@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    GameObject parede;
+    GameObject pB;
+    public float speedP = 0.15f; // Velocidade de movimento ajustável
+    bool encostou = false;
+
     public Rigidbody2D rbplayer;
     public float speed;
     public float jumpforce;
@@ -19,7 +24,15 @@ public class Player : MonoBehaviour
         rbplayer = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         cameraPos = GameObject.Find("Main Camera");
-        
+
+        parede = GameObject.Find("parede assustadora");
+        pB = GameObject.Find("ponto B");
+
+        if (parede == null)
+            Debug.LogError("Parede assustadora not found!");
+
+        if (pB == null)
+            Debug.LogError("Ponto B not found!");
     }
 
     void Update()
@@ -29,6 +42,12 @@ public class Player : MonoBehaviour
             Jump();
             AtualizarAnimacoes();
             cameraPos.transform.position = new Vector3(Mathf.Clamp(transform.position.x, 29.5f, 149.5f), Mathf.Clamp(transform.position.y, -4, 13.7f), cameraPos.transform.position.z);
+        }
+
+        if (encostou)
+        {
+            parede.transform.position = Vector3.MoveTowards(parede.transform.position, pB.transform.position, speedP * Time.deltaTime);
+            Debug.Log("Parede is moving towards Ponto B");
         }
     }
 
@@ -65,32 +84,39 @@ public class Player : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
-{
-    if (collision.gameObject.name == "Ground" || collision.gameObject.name == "esquerda" || collision.gameObject.name == "direita")
     {
-        Infloor = true;
-        jumpforce = 8f;  // Certifique-se de definir o valor correto para cada caso
-    }
-    if(collision.gameObject.name == "Wall")
-    {
-        Infloor = true;
-        jumpforce = 8f;
-    }
-    
-    if (collision.gameObject.CompareTag("Armadilhas"))
-    {
-        if (!isDead)  // Verifica se o personagem já não está morto
+        Debug.Log("Collision detected with: " + collision.gameObject.name);
+
+        if (collision.gameObject.name == "Ground" || collision.gameObject.name == "esquerda" || collision.gameObject.name == "direita")
         {
-            isDead = true;  // Define o estado de morte
-            animator.SetBool("taPulando", false);
-            animator.SetTrigger("Dead");
-            rbplayer.velocity = Vector2.zero;  // Para o movimento do personagem
-            rbplayer.isKinematic = true;  // Torna o Rigidbody cinemático para impedir mais movimentação
+            Infloor = true;
+            jumpforce = 8f;  // Certifique-se de definir o valor correto para cada caso
+        }
+        if (collision.gameObject.name == "Wall")
+        {
+            Infloor = true;
+            jumpforce = 8f;
+        }
+        
+        if (collision.gameObject.CompareTag("Armadilhas"))
+        {
+            if (!isDead)  // Verifica se o personagem já não está morto
+            {
+                isDead = true;  // Define o estado de morte
+                animator.SetBool("taPulando", false);
+                animator.SetTrigger("Dead");
+                rbplayer.velocity = Vector2.zero;  // Para o movimento do personagem
+                rbplayer.isKinematic = true;  // Torna o Rigidbody cinemático para impedir mais movimentação
+            }
+        }
+        if (collision.gameObject.CompareTag("pontoM"))
+        {
+            encostou = true;
+            Debug.Log("Player has collided with pontoM");
         }
     }
-}
 
-       void AtualizarAnimacoes()
+    void AtualizarAnimacoes()
     {
         if (!isDead)  // Atualiza animações apenas se não estiver morto
         {
@@ -100,6 +126,4 @@ public class Player : MonoBehaviour
             animator.SetBool("taCorrendo", HM != 0);
         }
     }
-    
-
-    }
+}
