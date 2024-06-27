@@ -37,7 +37,7 @@ public class SapoPlayer : MonoBehaviour
     {
         estaNoChao = Physics2D.OverlapCircle(verificadorDeChao.position, raioDeVerificacao, layerDoChao);
         AtualizarAnimacoes();
-        cameraPos.transform.position = new Vector3(transform.position.x, transform.position.y, cameraPos.transform.position.z);
+        cameraPos.transform.position = new Vector3(Mathf.Clamp(transform.position.x, -114, 300), Mathf.Clamp(transform.position.y, -4.3f, 5.2f), cameraPos.transform.position.z);
         if (Input.GetKeyDown(KeyCode.E)) // Troca de forma ao pressionar a tecla E
         {
             TrocarFormaPlayer();

@@ -207,6 +207,10 @@ MonoBehaviour:
   forcaPulo: 10
   speedPlayer: 5
   raioDeVerificacao: 0.2
+  sapoPrefab: {fileID: 0}
+  caracolPrefab: {fileID: 0}
+  gatoPrefab: {fileID: 0}
+  javaliPrefab: {fileID: 0}
 --- !u!95 &6470156394578998551
 Animator:
   serializedVersion: 5
