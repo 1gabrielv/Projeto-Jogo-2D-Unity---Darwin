@@ -12,6 +12,9 @@ TagManager:
   - gato
   - Armadilhas
   - pontoM
+  - guarda
+  - livro
+  - esfregao
   layers:
   - Default
   - TransparentFX
