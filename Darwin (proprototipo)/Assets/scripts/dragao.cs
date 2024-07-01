@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 
 public class dragao : MonoBehaviour
@@ -13,6 +14,7 @@ public class dragao : MonoBehaviour
 
 
     private GameObject attackHitbox;
+    int cont = 2;
 
     void Start()
     {
@@ -27,17 +29,27 @@ public class dragao : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(cont == 1){
+        attackHitbox.SetActive(true);
+        }
+        else if(cont == 0){
+        attackHitbox.SetActive(false);
+
+        }
     }
+
 
     IEnumerator FlapRoutine()
     {
         while (true)
         {
             animator.SetBool("batendo", true); // Ativa a animação de batendo
+            cont --;
             yield return new WaitForSeconds(flapInterval); // Espera o tempo da animação de batendo
             animator.SetBool("batendo", false); // Desativa a animação de batendo
+            cont --;
             yield return new WaitForSeconds(flapInterval); // Espera o intervalo antes de repetir
+            cont = 2;
         }
     }
 }

@@ -120,6 +120,7 @@ public class esqueleto : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D col){
         if (col.gameObject.CompareTag("player"))
         {
+            if(speed == 2){
             animator.SetBool("taAtacando", true);
             speed = 0;
             StartCoroutine(WaitAndReset());
@@ -129,7 +130,7 @@ public class esqueleto : MonoBehaviour
 
 
             StartCoroutine(WaitAndReset3());
-
+            }
     }
 }
 
@@ -149,6 +150,7 @@ private IEnumerator WaitAndReset2()
 
 
     animator.SetBool("taAtacando", false);
+    animator.SetBool("taCorrendo", false);
     attackHitbox.SetActive(false);
     }
 
@@ -156,6 +158,7 @@ private IEnumerator WaitAndReset2()
 {
     // Espera por 1 segundo
     yield return new WaitForSeconds(2.5f);
+    animator.SetBool("taCorrendo", true);
     speed = 2;
     }
     

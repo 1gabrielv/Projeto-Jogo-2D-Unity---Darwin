@@ -10,7 +10,7 @@ public class goblin : MonoBehaviour
     Animator animator;
     Transform currentPoint;
     public float speed = 5f;
-    public float pauseDuration = 2f; // Duração da pausa em segundos
+    public float pauseDuration = 1f; // Duração da pausa em segundos
     private SpriteRenderer oSpriteRenderer;
     private float pauseTimer = 0f; // Temporizador para a pausa
     private bool isPaused = false; // Indica se o caracol está pausado
@@ -26,11 +26,13 @@ public class goblin : MonoBehaviour
         pontoA = GameObject.Find("pa goblin");
         pontoB = GameObject.Find("pb goblin");
         animator = GetComponent<Animator>();
+
+        if(speed > 0)
         animator.SetBool("taCorrendo", true);
         currentPoint = pontoB.transform;
         oSpriteRenderer = GetComponent<SpriteRenderer>();
 
-        attackHitbox = transform.Find("attackGob1").gameObject;
+        attackHitbox = transform.Find("attackGob").gameObject;
         attackHitbox.SetActive(false);
     }
 
@@ -65,18 +67,18 @@ public class goblin : MonoBehaviour
             }
             else
             {
-                attackHitbox.transform.localPosition = new Vector2(-1f, 0f); // Posição à esquerda
+                attackHitbox.transform.localPosition = new Vector2(-1.8f, 0f); // Posição à esquerda
             }
 
             // Ativa o ataque quando colide com o personagem
-            /*if (isAttacking)
-            {
-                attackHitbox.SetActive(true);
-            }
-            else
-            {
-                attackHitbox.SetActive(false);
-            }*/
+            // if (isAttacking)
+            // {
+            //     attackHitbox.SetActive(true);
+            // }
+            // else
+            // {
+            //     attackHitbox.SetActive(false);
+            // }
 
             
 
@@ -100,10 +102,14 @@ public class goblin : MonoBehaviour
             }
         }
     }
+
 private void OnCollisionEnter2D(Collision2D col){
         if (col.gameObject.CompareTag("player"))
         {
+            if(speed == 5){
             speed = 0;
+            animator.SetBool("taAtacando", true);
+            
             StartCoroutine(WaitAndReset());
 
             
@@ -111,7 +117,7 @@ private void OnCollisionEnter2D(Collision2D col){
 
 
             StartCoroutine(WaitAndReset3());
-
+            }
     }
 }
 
@@ -119,7 +125,6 @@ private IEnumerator WaitAndReset()
 {
     // Espera por 1 segundo
     yield return new WaitForSeconds(0.3f);
-    animator.SetBool("taAtacando", true);
     attackHitbox.SetActive(true);
 
     }
@@ -132,13 +137,15 @@ private IEnumerator WaitAndReset2()
 
     animator.SetBool("taAtacando", false);
     attackHitbox.SetActive(false);
+    animator.SetBool("taCorrendo", false);
     }
 
     private IEnumerator WaitAndReset3()
 {
     // Espera por 1 segundo
-    yield return new WaitForSeconds(2.5f);
-    speed = 2;
+    yield return new WaitForSeconds(2f);
+    speed = 5;
+    animator.SetBool("taCorrendo", true);
     }
     
 }

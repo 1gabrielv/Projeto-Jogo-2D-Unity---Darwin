@@ -62,7 +62,7 @@ public class protaF3 : MonoBehaviour
         estaNoChao = Physics2D.OverlapCircle(verificadorDeChao.position, raioDeVerificacao, layerDoChao);
         AtualizarAnimacoes();
         }
-        cameraPos.transform.position = new Vector3(Mathf.Clamp(transform.position.x, 76.6f, 200), Mathf.Clamp(transform.position.y, 11.5f, 11.5f), cameraPos.transform.position.z);
+        cameraPos.transform.position = new Vector3(Mathf.Clamp(transform.position.x, 76.6f, 242), Mathf.Clamp(transform.position.y, 11.5f, 11.5f), cameraPos.transform.position.z);
 
     }
 void FixedUpdate() { // A Unity às vezes buga sem isso pra movimentar o player
