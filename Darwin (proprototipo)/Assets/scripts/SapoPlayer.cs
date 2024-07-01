@@ -15,7 +15,6 @@ public class SapoPlayer : MonoBehaviour
     private Animator animator; 
     private GameObject cameraPos;
 
-
     [SerializeField] private GameObject playerPrefab; // Prefab do sapo
     private GameObject playerInstance; // Instância do sapo
     private bool isPlayer = false;
@@ -38,6 +37,7 @@ public class SapoPlayer : MonoBehaviour
         estaNoChao = Physics2D.OverlapCircle(verificadorDeChao.position, raioDeVerificacao, layerDoChao);
         AtualizarAnimacoes();
         cameraPos.transform.position = new Vector3(Mathf.Clamp(transform.position.x, -114, 300), Mathf.Clamp(transform.position.y, -4.3f, 5.2f), cameraPos.transform.position.z);
+        
         if (Input.GetKeyDown(KeyCode.E)) // Troca de forma ao pressionar a tecla E
         {
             TrocarFormaPlayer();
@@ -55,13 +55,16 @@ public class SapoPlayer : MonoBehaviour
         float inputMove = Input.GetAxisRaw("Horizontal");
         oRigidbody2D.velocity = new Vector2(inputMove * speedPlayer, oRigidbody2D.velocity.y);
 
-        if (inputMove > 0) 
+        if (estaNoChao)
         {
-            oSpriteRenderer.flipX = true; 
-        }
-        if (inputMove < 0) 
-        {
-            oSpriteRenderer.flipX = false; 
+            if (inputMove < 0) 
+            {
+                oSpriteRenderer.flipX = false; 
+            }
+            else if (inputMove > 0) 
+            {
+                oSpriteRenderer.flipX = true; 
+            }
         }
     }
 
@@ -78,12 +81,23 @@ public class SapoPlayer : MonoBehaviour
         animator.SetBool("taPulando", !estaNoChao);
         float inputMove = Input.GetAxisRaw("Horizontal");
         animator.SetBool("taCorrendo", inputMove != 0);
+        
+        if (!estaNoChao)
+        {
+            if (inputMove > 0) 
+            {
+                oSpriteRenderer.flipX = false; 
+            }
+            else if (inputMove < 0) 
+            {
+                oSpriteRenderer.flipX = true; 
+            }
+        }
     }
 
     void TrocarFormaPlayer()
     {
-            playerInstance = Instantiate(playerPrefab, transform.position, transform.rotation);
-            Destroy(gameObject);
+        playerInstance = Instantiate(playerPrefab, transform.position, transform.rotation);
+        Destroy(gameObject);
     }
-
 }

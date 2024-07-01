@@ -5,7 +5,7 @@ using UnityEngine;
 public class movePlayer : MonoBehaviour
 {
  
-    public float forcaPulo = 5f;
+    private float forcaPulo = 7f;
     public float speedPlayer = 4f;
     private Rigidbody2D oRigidbody2D; 
     private SpriteRenderer oSpriteRenderer; // Parte do personagem que controla o sprite (olhar pra frente ou pra trás ou ficar de cabeça pra baixo)
