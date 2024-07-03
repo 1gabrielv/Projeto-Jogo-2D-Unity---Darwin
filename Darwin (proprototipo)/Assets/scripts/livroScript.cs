@@ -6,7 +6,13 @@ public class livroScript : MonoBehaviour
 {
     private SpriteRenderer oSpriteRenderer;
     private Rigidbody2D oRigidbody2D; 
-    public float speedLivro = 6f;
+    private float speedLivro = 6f;
+    GameObject cameraPos;
+
+
+    [SerializeField] private GameObject playerPrefab; // Prefab do sapo
+    private GameObject playerInstance; // Instância do sapo
+    private bool isPlayer = false;
 
     // Start is called before the first frame update
     void Start()
@@ -14,12 +20,23 @@ public class livroScript : MonoBehaviour
         oSpriteRenderer = GetComponent<SpriteRenderer>();
         oRigidbody2D = GetComponent<Rigidbody2D>();
         StartCoroutine(FlipSpriteY());
+        cameraPos = GameObject.Find("Main Camera");
+
+
+
+        playerPrefab = Resources.Load<GameObject>("protaF3");
     }
 
     // Update is called once per frame
     void Update()
     {
         moveplayer();
+        if (Input.GetKeyDown(KeyCode.E)) // Troca de forma ao pressionar a tecla E
+        {
+            TrocarFormPlayer();
+        }
+        cameraPos.transform.position = new Vector3(Mathf.Clamp(transform.position.x, 76.6f, 242), Mathf.Clamp(transform.position.y, 11.5f, 11.5f), cameraPos.transform.position.z);
+
     }
 
     public void moveplayer() 
@@ -53,7 +70,7 @@ public class livroScript : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.5f);
             oSpriteRenderer.flipY = !oSpriteRenderer.flipY;
         }
     }
@@ -62,5 +79,10 @@ public class livroScript : MonoBehaviour
     { 
         // A Unity às vezes buga sem isso pra movimentar o player
         moveplayer();
+    }
+    void TrocarFormPlayer()
+    {
+        playerInstance = Instantiate(playerPrefab, transform.position, transform.rotation);
+        Destroy(gameObject);
     }
 }

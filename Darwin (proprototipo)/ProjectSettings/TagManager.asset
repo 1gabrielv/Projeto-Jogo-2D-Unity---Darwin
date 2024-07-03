@@ -15,6 +15,9 @@ TagManager:
   - guarda
   - livro
   - esfregao
+  - slime
+  - dragao
+  - attack
   layers:
   - Default
   - TransparentFX

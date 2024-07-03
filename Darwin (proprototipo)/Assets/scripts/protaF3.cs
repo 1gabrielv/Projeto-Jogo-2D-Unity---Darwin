@@ -4,18 +4,34 @@ using UnityEngine;
 
 public class protaF3 : MonoBehaviour
 {
-    public float forcaPulo = 5f;
-    public float speedPlayer = 4f;
+    private float forcaPulo = 5f;
+    private float speedPlayer = 4f;
     private Rigidbody2D oRigidbody2D; 
     private SpriteRenderer oSpriteRenderer; // Parte do personagem que controla o sprite (olhar pra frente ou pra trás ou ficar de cabeça pra baixo)
     private bool estaNoChao;
     private Transform verificadorDeChao; 
-    public float raioDeVerificacao;
+    private float raioDeVerificacao = 0.2f;
     private LayerMask layerDoChao;
     private Animator animator; // Troca de animações
     GameObject cameraPos;
     private bool isDead = false;  // Variável para controlar o estado de morte
 
+
+
+    [SerializeField] private GameObject livroPrefab; // Prefab do sapo
+    private GameObject livroInstance; // Instância do sapo
+    private bool isLivro = false;
+
+
+    [SerializeField] private GameObject esfregaoPrefab; // Prefab do sapo
+    private GameObject esfregaoInstance; // Instância do sapo
+    private bool isEsfregao = false;
+
+
+
+    [SerializeField] private GameObject guardaPrefab; // Prefab do sapo
+    private GameObject guardaInstance; // Instância do sapo
+    private bool isGuarda = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +68,13 @@ public class protaF3 : MonoBehaviour
         {
             Debug.LogError("Main Camera não encontrada. Certifique-se de que a câmera se chama 'Main Camera'.");
         }
+
+        livroPrefab = Resources.Load<GameObject>("livroplayer");
+        guardaPrefab = Resources.Load<GameObject>("guarda");
+        esfregaoPrefab = Resources.Load<GameObject>("esfre3");
+
+        transform.rotation = Quaternion.Euler(0, 0, 0);
+        oSpriteRenderer.flipX = false;
     }
 
     // Update is called once per frame
@@ -61,8 +84,24 @@ public class protaF3 : MonoBehaviour
         {
         estaNoChao = Physics2D.OverlapCircle(verificadorDeChao.position, raioDeVerificacao, layerDoChao);
         AtualizarAnimacoes();
+        if (Input.GetKeyDown(KeyCode.E) && isLivro == true) // Troca de forma ao pressionar a tecla E
+        {
+            TrocarFormaLivro();
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && isGuarda == true) // Troca de forma ao pressionar a tecla E
+        {
+            TrocarFormaGuarda();
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && isEsfregao == true) // Troca de forma ao pressionar a tecla E
+        {
+            TrocarFormaEsfregao();
+        }
+
         }
         cameraPos.transform.position = new Vector3(Mathf.Clamp(transform.position.x, 76.6f, 242), Mathf.Clamp(transform.position.y, 11.5f, 11.5f), cameraPos.transform.position.z);
+        
 
     }
 void FixedUpdate() { // A Unity às vezes buga sem isso pra movimentar o player
@@ -115,14 +154,64 @@ void FixedUpdate() { // A Unity às vezes buga sem isso pra movimentar o player
             }
         }
     }
+    void OnTriggerEnter2D(Collider2D other)
+{
+    if (other.CompareTag("livro"))
+    {
+        isLivro = true;
+    }
 
-    private void OnTriggerEnter2D(Collider2D col){
-        if (col.gameObject.CompareTag("Armadilhas")){
+    if (other.CompareTag("guarda"))
+    {
+        isGuarda = true;
+    }
+
+    if (other.CompareTag("esfregao"))
+    {
+        isEsfregao = true;
+    }
+
+    if (other.gameObject.CompareTag("Armadilhas") || other.gameObject.CompareTag("slime")){
             isDead = true;
             animator.SetBool("taPulando", false);
             animator.SetTrigger("Dead");
             oRigidbody2D.velocity = Vector2.zero;  // Para o movimento do personagem
             oRigidbody2D.isKinematic = true;  // Torna o Rigidbody cinemático para impedir mais movimentação
         }
+    }
+
+        void TrocarFormaLivro()
+    {
+ 
+        // Instancia o novo prefab
+        livroInstance = Instantiate(livroPrefab, transform.position, transform.rotation);
+        // Destrói o personagem atual
+        Destroy(gameObject);
+
+    }
+
+        void TrocarFormaGuarda()
+{
+    // Defina o offset desejado no eixo y
+    float offsetY = 1.0f;
+
+    // Obtenha a posição atual e adicione o offset
+    Vector3 newPosition = new Vector3(transform.position.x, transform.position.y + offsetY, transform.position.z);
+
+    // Instancia o novo prefab na nova posição
+    guardaInstance = Instantiate(guardaPrefab, newPosition, transform.rotation);
+
+    // Destrói o personagem atual
+    Destroy(gameObject);
+}
+
+        void TrocarFormaEsfregao()
+    {
+ 
+        // Instancia o novo prefab
+        esfregaoInstance = Instantiate(esfregaoPrefab, transform.position, transform.rotation);
+        // Destrói o personagem atual
+        Destroy(gameObject);
+
     }
 }

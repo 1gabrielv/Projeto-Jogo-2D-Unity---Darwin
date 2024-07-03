@@ -9,8 +9,8 @@ public class esqueleto : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
     Transform currentPoint;
-    public float speed = 2f;
-    public float pauseDuration = 2.2f; // Duração da pausa em segundos
+    private float speed = 2f;
+    private float pauseDuration = 1.5f; // Duração da pausa em segundos
     private SpriteRenderer oSpriteRenderer;
     private float pauseTimer = 0f; // Temporizador para a pausa
     private bool isPaused = false; // Indica se o esqueleto está pausado

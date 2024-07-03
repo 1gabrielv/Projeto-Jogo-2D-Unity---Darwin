@@ -35,6 +35,14 @@ public class movePlayer : MonoBehaviour
     [SerializeField] private GameObject javaliPrefab; // Prefab do sapo
     private GameObject javaliInstance; // Instância do sapo
     private bool isJavali = false;
+
+
+
+    private GameObject FogoSapo;
+    private GameObject FogoGato;
+    private GameObject FogoCaracol;
+    private GameObject FogoJavali;
+  
     
 
     // Start is called before the first frame update
@@ -52,6 +60,19 @@ public class movePlayer : MonoBehaviour
         gatoPrefab = Resources.Load<GameObject>("gatoplayer");
         caracolPrefab = Resources.Load<GameObject>("caracolplayer");
         javaliPrefab = Resources.Load<GameObject>("javaliplayer");
+
+
+        FogoSapo = transform.Find("fogo sapo").gameObject;
+        FogoSapo.SetActive(false);
+
+        FogoGato = transform.Find("fogo gato").gameObject;
+        FogoGato.SetActive(false);
+
+        FogoCaracol = transform.Find("fogo caracol").gameObject;
+        FogoCaracol.SetActive(false);
+
+        FogoJavali = transform.Find("fogo javali").gameObject;
+        FogoJavali.SetActive(false);
 
     }
 
@@ -119,6 +140,7 @@ public class movePlayer : MonoBehaviour
     if (other.CompareTag("Sapo"))
     {
         isSapo = true;
+        FogoSapo.SetActive(true);
     }
     else
     {
@@ -128,6 +150,7 @@ public class movePlayer : MonoBehaviour
     if (other.CompareTag("caracol"))
     {
         isCaracol = true;
+        FogoCaracol.SetActive(true);
     }
 
     else
@@ -137,6 +160,7 @@ public class movePlayer : MonoBehaviour
     if (other.CompareTag("gato"))
     {
         isGato = true;
+        FogoGato.SetActive(true);
     }
     else
     {
@@ -146,6 +170,7 @@ public class movePlayer : MonoBehaviour
     if (other.CompareTag("javali"))
     {
         isJavali = true;
+        FogoJavali.SetActive(true);
     }
 
     else
