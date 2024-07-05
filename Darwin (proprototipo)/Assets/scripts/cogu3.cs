@@ -9,16 +9,19 @@ public class cogu3 : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
     Transform currentPoint;
-    private float speed = 4.5f;
-    private float pauseDuration = 0.8f; // Duração da pausa em segundos
+    private float speed = 2f;
+    private float pauseDuration = 1f; // Duração da pausa em segundos
     private SpriteRenderer oSpriteRenderer;
     private float pauseTimer = 0f; // Temporizador para a pausa
     private bool isPaused = false; // Indica se o caracol está pausado
 
-
-
     private GameObject attackHitbox;
     public bool isAttacking = false;
+    public bool isDano = false;
+    public bool stun = false;
+
+    // Duração da animação de morte em segundos
+    private float deathAnimationDuration = 1.1f;
 
     void Start()
     {
@@ -29,7 +32,6 @@ public class cogu3 : MonoBehaviour
         animator.SetBool("taCorrendo", true);
         currentPoint = pontoB.transform;
         oSpriteRenderer = GetComponent<SpriteRenderer>();
-
 
         attackHitbox = transform.Find("attackCogu3").gameObject;
         attackHitbox.SetActive(false);
@@ -68,18 +70,6 @@ public class cogu3 : MonoBehaviour
                 attackHitbox.transform.localPosition = new Vector2(-2f, 0.4f); // Posição à esquerda
             }
 
-            // Ativa o ataque quando colide com o personagem
-            /*if (isAttacking)
-            {
-                attackHitbox.SetActive(true);
-            }
-            else
-            {
-                attackHitbox.SetActive(false);
-            }*/
-
-            
-
             // Verifica se o esqueleto chegou próximo ao ponto atual e inverte o ponto de destino
             if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f)
             {
@@ -101,67 +91,71 @@ public class cogu3 : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("attack"))
+        {
+            speed = 0;
+            animator.SetBool("taStun", false);
+            animator.SetBool("taAtacando", false);
+            animator.SetBool("taCorrendo", false);
+            animator.SetBool("dano", true);
+            stun = true;
+            StartCoroutine(ResetAfterStun());
+        }
+    }
 
-    // void OnTriggerEnter2D(Collider2D col){
-    //     if (col.gameObject.CompareTag("player"))
-    //     {
-    //         attackHitbox.SetActive(true);
-    //         animator.SetBool("taAtacando", true);
-    //         speed = 0;
-    //         Debug.Log("Player collided with enemy!");
-    //         // Aqui você pode adicionar lógica para causar dano ao jogador, por exemplo.
-    //     }
-    //     else{
-    //         attackHitbox.SetActive(false);
-    //         animator.SetBool("taAtacando", false);
-    //         speed = 2f;
-    //     }
-    // }
+    private IEnumerator ResetAfterStun()
+    {
+        yield return new WaitForSeconds(0.3f);
+        Debug.Log("Ativando animação de morte");
+        animator.SetBool("dano", false); // Desativa a animação de dano
+        animator.SetBool("morte", true);
+        yield return new WaitForSeconds(deathAnimationDuration); // Espera a duração da animação de morte
+        Debug.Log("Destruindo o cogumelo");
+        Destroy(gameObject); // Destroi o cogumelo
+    }
 
-    private void OnCollisionEnter2D(Collision2D col){
+    private void OnCollisionEnter2D(Collision2D col)
+    {
         if (col.gameObject.CompareTag("player"))
         {
-            if(speed == 4.5f){
-            animator.SetBool("taAtacando", true);
-            speed = 0;
-            StartCoroutine(WaitAndReset());
-
-            
-            StartCoroutine(WaitAndReset2());
-
-
-            StartCoroutine(WaitAndReset3());
+            if (!stun)
+            {
+                if (speed == 2)
+                {
+                    animator.SetBool("taAtacando", true);
+                    speed = 0;
+                    StartCoroutine(WaitAndReset());
+                    StartCoroutine(WaitAndReset2());
+                    StartCoroutine(WaitAndReset3());
+                }
             }
-    }
-}
-
-private IEnumerator WaitAndReset()
-{
-    // Espera por 1 segundo
-    yield return new WaitForSeconds(0.28f);
-
-    attackHitbox.SetActive(true);
-
+        }
     }
 
-private IEnumerator WaitAndReset2()
-{
-    // Espera por 1 segundo
-    yield return new WaitForSeconds(1f);
+    private IEnumerator WaitAndReset()
+    {
+        // Espera por 0.4 segundos
+        yield return new WaitForSeconds(0.4f);
+        attackHitbox.SetActive(true);
+    }
 
-
-    animator.SetBool("taAtacando", false);
-    animator.SetBool("taStun", true);
-    attackHitbox.SetActive(false);
+    private IEnumerator WaitAndReset2()
+    {
+        // Espera por 1 segundo
+        yield return new WaitForSeconds(1f);
+        animator.SetBool("taAtacando", false);
+        animator.SetBool("taStun", true);
+        attackHitbox.SetActive(false);
     }
 
     private IEnumerator WaitAndReset3()
-{
-    // Espera por 1 segundo
-    yield return new WaitForSeconds(2.5f);
-    animator.SetBool("taStun", false);
-    speed = 4.5f;
-    animator.SetBool("taCorrendo", true);
+    {
+        // Espera por 2.5 segundos
+        yield return new WaitForSeconds(2.5f);
+        animator.SetBool("taStun", false);
+        speed = 2;
+        animator.SetBool("taCorrendo", true);
     }
-    
 }
