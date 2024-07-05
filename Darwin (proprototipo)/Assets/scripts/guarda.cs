@@ -16,7 +16,6 @@ public class guarda : MonoBehaviour
 
     [SerializeField] private GameObject playerPrefab; // Prefab do sapo
     private GameObject playerInstance; // Instância do sapo
-    private bool isPlayer = false;
 
     // ataque
     private bool isAttacking = false; // Variável para verificar se o personagem está atacando

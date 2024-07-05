@@ -16,7 +16,6 @@ public class JavaliPlayer : MonoBehaviour
 
     [SerializeField] private GameObject playerPrefab; // Prefab do sapo
     private GameObject playerInstance; // Instância do sapo
-    private bool isPlayer = false;
 
     // Velocidade de corrida
     public float speedRun = 5.3f;

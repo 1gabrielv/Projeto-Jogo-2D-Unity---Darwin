@@ -17,7 +17,6 @@ public class SapoPlayer : MonoBehaviour
 
     [SerializeField] private GameObject playerPrefab; // Prefab do sapo
     private GameObject playerInstance; // Instância do sapo
-    private bool isPlayer = false;
 
     // Start is called before the first frame update
     void Start()

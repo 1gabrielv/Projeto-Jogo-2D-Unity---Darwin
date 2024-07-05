@@ -5,9 +5,6 @@ public class dragao : MonoBehaviour
 {
     Rigidbody2D rb;
     Animator animator;
-    private float pauseTimer = 0f; // Temporizador para a pausa
-    private bool isPaused = false; // Indica se o caracol está pausado
-    private bool isFlapping = false; // Indica se a animação de batendo está ativa
     private float flapInterval = 2.1f; // Intervalo de tempo para a animação de batendo
 
     private GameObject Dano;
