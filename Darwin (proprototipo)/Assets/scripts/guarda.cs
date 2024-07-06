@@ -22,6 +22,8 @@ public class guarda : MonoBehaviour
     private int numAttack = 0;
      // hitbox de ataque
     private GameObject attackHitbox;
+    private int contadorDanos = 0;
+
 
     // Start is called before the first frame update
     void Start()
@@ -134,4 +136,38 @@ public class guarda : MonoBehaviour
         attackHitbox.SetActive(false); // Desativar a hitbox de ataque
         isAttacking = false; // Definir como não atacando após a animação
     }
+
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Armadilhas"))
+        {
+            if (contadorDanos == 0) // Verifica se o personagem ainda não morreu
+            {
+                contadorDanos++;
+                animator.SetBool("dano", true);
+                StartCoroutine(ResetDamageAnimation());
+            }
+            else if(contadorDanos == 1){
+                speedPlayer = 0;
+                animator.SetBool("morte", true); // Ativa animação de morte
+                    StartCoroutine(DestruirPersonagem()); // Chama o método para destruir o personagem após a animação
+            }   
+            }
+        }
+
+    IEnumerator ResetDamageAnimation()
+    {
+        yield return new WaitForSeconds(0.3f); // Aguarda 0.3 segundos
+        animator.SetBool("dano", false); // Desativa a animação de dano
+    }
+
+    IEnumerator DestruirPersonagem()
+    {
+        // Desativa o movimento e espera a animação de morte terminar
+        oRigidbody2D.velocity = Vector2.zero;
+        yield return new WaitForSeconds(1.0f); // Aguarda 1 segundo após a animação de morte
+        Destroy(gameObject); // Destrói o personagem
+    }
 }
+

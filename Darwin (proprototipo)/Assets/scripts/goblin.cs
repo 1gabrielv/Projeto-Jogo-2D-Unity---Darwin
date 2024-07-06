@@ -19,6 +19,11 @@ public class goblin : MonoBehaviour
 
     private GameObject attackHitbox;
     public bool isAttacking = false;
+    public bool stun = false;
+
+    private int hitCount = 0; // Contador de danos
+    private int maxHits = 2; // Número máximo de danos antes de morrer
+
 
     void Start()
     {
@@ -103,50 +108,85 @@ public class goblin : MonoBehaviour
         }
     }
 
-private void OnCollisionEnter2D(Collision2D col){
+void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("attack"))
+        {
+            hitCount++;
+            if (hitCount >= maxHits)
+            {
+                // Morre se tomou 3 danos
+                speed = 0;
+                animator.SetBool("taAtacando", false);
+                animator.SetBool("taCorrendo", false);
+                animator.SetBool("dano", true);
+                StartCoroutine(HandleDeath());
+            }
+            else
+            {
+                // Apenas toma dano
+                animator.SetBool("dano", true);
+                StartCoroutine(ResetAfterDamage());
+            }
+        }
+    }
+
+    private IEnumerator ResetAfterDamage()
+    {
+        yield return new WaitForSeconds(0.3f);
+        animator.SetBool("dano", false);
+    }
+
+    private IEnumerator HandleDeath()
+    {
+        yield return new WaitForSeconds(0.3f);
+        Debug.Log("Ativando animação de morte");
+        animator.SetBool("dano", false); // Desativa a animação de dano
+        animator.SetBool("morte", true);
+        yield return new WaitForSeconds(0.3f); // Espera a duração da animação de morte
+        Debug.Log("Destruindo o cogumelo");
+        Destroy(gameObject); // Destroi o cogumelo
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
         if (col.gameObject.CompareTag("player"))
         {
-            if(speed == 5){
-            speed = 0;
-            animator.SetBool("taAtacando", true);
-            
-            StartCoroutine(WaitAndReset());
-
-            
-            StartCoroutine(WaitAndReset2());
-
-
-            StartCoroutine(WaitAndReset3());
+            if (!stun)
+            {
+                if (speed == 5)
+                {
+                    animator.SetBool("taAtacando", true);
+                    speed = 0;
+                    StartCoroutine(WaitAndReset());
+                    StartCoroutine(WaitAndReset2());
+                    StartCoroutine(WaitAndReset3());
+                }
             }
-    }
-}
-
-private IEnumerator WaitAndReset()
-{
-    // Espera por 1 segundo
-    yield return new WaitForSeconds(0.3f);
-    attackHitbox.SetActive(true);
-
+        }
     }
 
-private IEnumerator WaitAndReset2()
-{
-    // Espera por 1 segundo
-    yield return new WaitForSeconds(1f);
+    private IEnumerator WaitAndReset()
+    {
+        // Espera por 0.4 segundos
+        yield return new WaitForSeconds(0.4f);
+        attackHitbox.SetActive(true);
+    }
 
-
-    animator.SetBool("taAtacando", false);
-    attackHitbox.SetActive(false);
-    animator.SetBool("taCorrendo", false);
+    private IEnumerator WaitAndReset2()
+    {
+        // Espera por 1 segundo
+        yield return new WaitForSeconds(1f);
+        animator.SetBool("taAtacando", false);
+        animator.SetBool("taCorrendo", false);
+        attackHitbox.SetActive(false);
     }
 
     private IEnumerator WaitAndReset3()
-{
-    // Espera por 1 segundo
-    yield return new WaitForSeconds(2f);
-    speed = 5;
-    animator.SetBool("taCorrendo", true);
+    {
+        // Espera por 2.5 segundos
+        yield return new WaitForSeconds(2.5f);
+        speed = 5;
+        animator.SetBool("taCorrendo", true);
     }
-    
 }
-

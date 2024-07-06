@@ -13,6 +13,9 @@ public class livroScript : MonoBehaviour
     [SerializeField] private GameObject playerPrefab; // Prefab do sapo
     private GameObject playerInstance; // Instância do sapo
 
+    private GameObject fumaça;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +27,8 @@ public class livroScript : MonoBehaviour
 
 
         playerPrefab = Resources.Load<GameObject>("protaF3");
+        fumaça = transform.Find("fumaça").gameObject;
+        fumaça.SetActive(false);
     }
 
     // Update is called once per frame
@@ -82,6 +87,28 @@ public class livroScript : MonoBehaviour
     void TrocarFormPlayer()
     {
         playerInstance = Instantiate(playerPrefab, transform.position, transform.rotation);
+        Destroy(gameObject);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Armadilhas"))
+        {
+            StartCoroutine(HandleTrap());
+        }
+    }
+
+     private void OnCollisionEnter2D(Collision2D col) {
+        if(col.gameObject.CompareTag("slime")){
+            StartCoroutine(HandleTrap());
+        }
+    }
+
+    private IEnumerator HandleTrap()
+    {
+        speedLivro = 0;
+        fumaça.SetActive(true);
+        yield return new WaitForSeconds(1f); // Espera 1 segundo
         Destroy(gameObject);
     }
 }

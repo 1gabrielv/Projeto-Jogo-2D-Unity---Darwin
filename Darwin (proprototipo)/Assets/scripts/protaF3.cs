@@ -33,6 +33,12 @@ public class protaF3 : MonoBehaviour
     private GameObject guardaInstance; // Instância do sapo
     private bool isGuarda = false;
     // Start is called before the first frame update
+
+
+
+    private GameObject FogoGuarda;
+    private GameObject FogoEsfregao;
+    private GameObject FogoLivro;
     void Start()
     {
         oRigidbody2D = GetComponent<Rigidbody2D>(); // Atribui o Rigidbody sem precisar arrastar dentro da Unity
@@ -75,6 +81,15 @@ public class protaF3 : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(0, 0, 0);
         oSpriteRenderer.flipX = false;
+
+        FogoGuarda = transform.Find("fogo guarda").gameObject;
+        FogoGuarda.SetActive(false);
+
+        FogoEsfregao = transform.Find("fogo esfregao").gameObject;
+        FogoEsfregao.SetActive(false);
+
+        FogoLivro = transform.Find("fogo livro").gameObject;
+        FogoLivro.SetActive(false);
     }
 
     // Update is called once per frame
@@ -142,7 +157,7 @@ void FixedUpdate() { // A Unity às vezes buga sem isso pra movimentar o player
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Armadilhas"))
+        if (collision.gameObject.CompareTag("Armadilhas") || collision.gameObject.CompareTag("slime"))
         {
             if (!isDead)  // Verifica se o personagem já não está morto
             {
@@ -159,16 +174,22 @@ void FixedUpdate() { // A Unity às vezes buga sem isso pra movimentar o player
     if (other.CompareTag("livro"))
     {
         isLivro = true;
+        FogoLivro.SetActive(true);
+
     }
 
     if (other.CompareTag("guarda"))
     {
         isGuarda = true;
+        FogoGuarda.SetActive(true);
+
     }
 
     if (other.CompareTag("esfregao"))
     {
         isEsfregao = true;
+        FogoEsfregao.SetActive(true);
+
     }
 
     if (other.gameObject.CompareTag("Armadilhas") || other.gameObject.CompareTag("slime")){

@@ -12,6 +12,9 @@ public class dragao : MonoBehaviour
     private GameObject attackHitbox;
     int cont = 2;
 
+    private GameObject Morte;
+    private int hits = 0;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -23,6 +26,9 @@ public class dragao : MonoBehaviour
 
         Dano = transform.Find("poder dragao").gameObject;
         Dano.SetActive(false);
+
+        Morte = transform.Find("morte").gameObject;
+        Morte.SetActive(false);
     }
 
     // Update is called once per frame
@@ -56,14 +62,32 @@ public class dragao : MonoBehaviour
     {
         if (other.CompareTag("attack"))
         {
-            Dano.SetActive(true);
-            StartCoroutine(DisableDanoAfterDelay(2f)); // Inicia a corrotina para desativar Dano após 2 segundos
+            if (hits < 5)
+            {
+                hits++;
+                Dano.SetActive(true);
+                StartCoroutine(DisableDanoAfterDelay(1.4f)); // Inicia a corrotina para desativar Dano após 1.4 segundos
+            }
+            else
+            {
+                Morte.SetActive(true);
+                StopAllCoroutines(); // Para todas as corrotinas em execução
+                animator.enabled = false; // Desativa todas as animações
+                rb.velocity = Vector2.zero; // Para qualquer movimento
+                StartCoroutine(DestroyAfterDelay(2.8f)); // Inicia a corrotina para destruir o GameObject após 3 segundos
+            }
         }
     }
 
     IEnumerator DisableDanoAfterDelay(float delay)
     {
-        yield return new WaitForSeconds(delay); // Espera o tempo especificado (2 segundos)
+        yield return new WaitForSeconds(delay); // Espera o tempo especificado (1.4 segundos)
         Dano.SetActive(false); // Desativa Dano
+    }
+
+    IEnumerator DestroyAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay); // Espera o tempo especificado (3 segundos)
+        Destroy(gameObject); // Destroi o GameObject
     }
 }

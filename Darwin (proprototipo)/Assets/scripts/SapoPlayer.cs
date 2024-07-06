@@ -18,6 +18,8 @@ public class SapoPlayer : MonoBehaviour
     [SerializeField] private GameObject playerPrefab; // Prefab do sapo
     private GameObject playerInstance; // Instância do sapo
 
+    private GameObject fumaça;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,9 @@ public class SapoPlayer : MonoBehaviour
         animator = GetComponent<Animator>();
         cameraPos = GameObject.Find("Main Camera");
         playerPrefab = Resources.Load<GameObject>("prota");
+
+        fumaça = transform.Find("fumaça").gameObject;
+        fumaça.SetActive(false);
     }
 
     // Update is called once per frame
@@ -97,6 +102,22 @@ public class SapoPlayer : MonoBehaviour
     void TrocarFormaPlayer()
     {
         playerInstance = Instantiate(playerPrefab, transform.position, transform.rotation);
+        Destroy(gameObject);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Armadilhas"))
+        {
+            StartCoroutine(HandleTrap());
+        }
+    }
+
+    private IEnumerator HandleTrap()
+    {
+        speedPlayer = 0;
+        fumaça.SetActive(true);
+        yield return new WaitForSeconds(1f); // Espera 1 segundo
         Destroy(gameObject);
     }
 }
