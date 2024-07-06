@@ -18,6 +18,7 @@ TagManager:
   - slime
   - dragao
   - attack
+  - star
   layers:
   - Default
   - TransparentFX
