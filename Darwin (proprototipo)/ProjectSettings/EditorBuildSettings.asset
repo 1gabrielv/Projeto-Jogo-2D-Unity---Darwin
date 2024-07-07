@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/tela inicio.unity
+    guid: d7de338e3e689d646ad3c2002414f140
+  - enabled: 1
+    path: Assets/Scenes/telatroca.unity
+    guid: 3c479c7175363e444adf83dfde40e8a3
+  - enabled: 1
     path: Assets/Scenes/Fase 1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -17,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fase 4.unity
     guid: cc5e7ddf35422824eb612b588be01f5b
+  - enabled: 1
+    path: Assets/Scenes/morte.unity
+    guid: f2d5cb7123e6ca64f9ccdf8d4a65377c
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 13cd6f563ddf71a44b1fb1b1dfb29945
   m_configObjects: {}

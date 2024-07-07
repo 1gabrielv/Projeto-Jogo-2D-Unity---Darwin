@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GatoPlayer : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class GatoPlayer : MonoBehaviour
     private LayerMask layerDoChao;
     private Animator animator;
     private GameObject cameraPos;
-
+    public static bool fasemorte = true;
     [SerializeField] private GameObject playerPrefab; // Prefab do sapo
     private GameObject playerInstance; // Instância do sapo
 
@@ -38,7 +39,6 @@ public class GatoPlayer : MonoBehaviour
         playerPrefab = Resources.Load<GameObject>("prota");
         // Encontrar a hitbox de ataque
         attackHitbox = transform.Find("attack").gameObject;
-
         // Certifique-se de que a hitbox está desativada no início
         attackHitbox.SetActive(false);
     }
@@ -149,11 +149,26 @@ public class GatoPlayer : MonoBehaviour
                 StartCoroutine(ResetDamageAnimation());
             }
             else if(contadorDanos == 1){
+                PlayerPrefs.SetString("UltimaFase", SceneManager.GetActiveScene().name);
                 animator.SetBool("morte", true); // Ativa animação de morte
-                    StartCoroutine(DestruirPersonagem()); // Chama o método para destruir o personagem após a animação
+                StartCoroutine(DestruirPersonagem()); // Chama o método para destruir o personagem após a animação
+                if(fasemorte){
+                    fasemorte = false;
+                    Invoke("fase", 0.5f);
+                }
+                else{
+                    fasemorte = true;
+                    Invoke("gameover", 0.5f);
+                }
             }   
             }
         }
+    private void fase(){
+        SceneManager.LoadScene("morte", LoadSceneMode.Single);
+    }
+    private void gameover(){
+        SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+    }
 
     IEnumerator ResetDamageAnimation()
     {

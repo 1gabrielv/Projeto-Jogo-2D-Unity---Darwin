@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class guarda : MonoBehaviour
 {
@@ -23,8 +24,6 @@ public class guarda : MonoBehaviour
      // hitbox de ataque
     private GameObject attackHitbox;
     private int contadorDanos = 0;
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +36,6 @@ public class guarda : MonoBehaviour
         playerPrefab = Resources.Load<GameObject>("protaF3");
         // Encontrar a hitbox de ataque
         attackHitbox = transform.Find("attackGuarda").gameObject;
-        
         // Certifique-se de que a hitbox está desativada no início
         attackHitbox.SetActive(false);
 
@@ -149,12 +147,28 @@ public class guarda : MonoBehaviour
                 StartCoroutine(ResetDamageAnimation());
             }
             else if(contadorDanos == 1){
+                PlayerPrefs.SetString("UltimaFase", SceneManager.GetActiveScene().name);
                 speedPlayer = 0;
                 animator.SetBool("morte", true); // Ativa animação de morte
-                    StartCoroutine(DestruirPersonagem()); // Chama o método para destruir o personagem após a animação
+                StartCoroutine(DestruirPersonagem()); // Chama o método para destruir o personagem após a animação
+                if(GatoPlayer.fasemorte){
+                    GatoPlayer.fasemorte = false;
+                    Invoke("fase", 0.5f);
+                }
+                else{
+                    GatoPlayer.fasemorte = true;
+                    Invoke("gameover", 0.5f);
+                }
             }   
             }
         }
+
+    private void fase(){
+        SceneManager.LoadScene("morte", LoadSceneMode.Single);
+    }
+    private void gameover(){
+        SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+    }
 
     IEnumerator ResetDamageAnimation()
     {

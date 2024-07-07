@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class protaMorte : MonoBehaviour
 {
@@ -13,13 +14,13 @@ public class protaMorte : MonoBehaviour
     public float raioDeVerificacao;
     private LayerMask layerDoChao;
     private Animator animator; // Troca de animações
+    private int contEstrelas = 0;
     
     // Start is called before the first frame update
     void Start()
     {
         oRigidbody2D = GetComponent<Rigidbody2D>(); // Atribui o Rigidbody sem precisar arrastar dentro da Unity
         oSpriteRenderer = GetComponent<SpriteRenderer>(); // Atribui o SpriteRenderer sem precisar arrastar dentro da Unity
-
         verificadorDeChao = transform.Find("verificarChao"); // Acha um GameObject de forma privada
         // verificadorDeChao = GameObject.Find("verificarChao").transform; <-- ou isso caso não dê certo o de cima
         layerDoChao = LayerMask.GetMask("chao"); // Define a LayerMask para o layer "chao"
@@ -68,8 +69,16 @@ public class protaMorte : MonoBehaviour
 {
     if (other.CompareTag("star"))
     {
+        contEstrelas = contEstrelas + 1;
         Destroy(other);
+        if(contEstrelas == 9){
+            Invoke("retorna", 0.5f);
+        }
     }
 }
+    private void retorna(){
+        string ultimaFase = PlayerPrefs.GetString("UltimaFase", "Fase 1");
+        SceneManager.LoadScene(ultimaFase, LoadSceneMode.Single);
+    }
 
 }

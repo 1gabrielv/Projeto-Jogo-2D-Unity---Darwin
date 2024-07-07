@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public float jumpforce;
     private SpriteRenderer sr;
     public bool Infloor = true;
+    private bool encostou = false;
     private Animator animator;
     private bool isDead = false;  // Variável para controlar o estado de morte
     GameObject cameraPos;
@@ -38,9 +39,9 @@ public class Player : MonoBehaviour
             cameraPos.transform.position = new Vector3(Mathf.Clamp(transform.position.x, 29.5f, 149.5f), Mathf.Clamp(transform.position.y, -4, 13.7f), cameraPos.transform.position.z);
         }
 
-
+        if(encostou){
           parede.transform.position = Vector3.MoveTowards(parede.transform.position, pB.transform.position, speedP * Time.deltaTime);
-            Debug.Log("Parede is moving towards Ponto B");
+        }
 
     }
 
@@ -83,12 +84,12 @@ public class Player : MonoBehaviour
         if (collision.gameObject.name == "Ground" || collision.gameObject.name == "esquerda" || collision.gameObject.name == "direita")
         {
             Infloor = true;
-            jumpforce = 6.7f;  // Certifique-se de definir o valor correto para cada caso
+            jumpforce = 7f;  // Certifique-se de definir o valor correto para cada caso
         }
         if (collision.gameObject.name == "Wall")
         {
             Infloor = true;
-            jumpforce = 7.8f;
+            jumpforce = 8f;
         }
         
         if (collision.gameObject.CompareTag("Armadilhas"))
@@ -103,6 +104,12 @@ public class Player : MonoBehaviour
             }
         }
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision){
+        if(collision.CompareTag("pontoM")){
+            encostou = true;
+        }
     }
 
     void AtualizarAnimacoes()

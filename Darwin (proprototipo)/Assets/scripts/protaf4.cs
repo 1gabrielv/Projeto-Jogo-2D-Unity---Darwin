@@ -31,7 +31,7 @@ public class protaf4 : MonoBehaviour
         {
             Jump();
             AtualizarAnimacoes();
-            cameraPos.transform.position = new Vector3(Mathf.Clamp(transform.position.x, -3.43f, 3.5f), Mathf.Clamp(transform.position.y, -2, 59.4f), cameraPos.transform.position.z);
+            cameraPos.transform.position = new Vector3(Mathf.Clamp(transform.position.x, -3.43f, 3.5f), Mathf.Clamp(transform.position.y, -2, 60.5f), cameraPos.transform.position.z);
         }
 
     }
@@ -75,6 +75,13 @@ public class protaf4 : MonoBehaviour
         if (collision.gameObject.name == "chaocave")
         {
             Infloor = true;
+            jumpforce = 9.9f;
+        }
+
+        if (collision.gameObject.name == "chao")
+        {
+            Infloor = true;
+            jumpforce = 10.3f;
         }
         
         if (collision.gameObject.CompareTag("Armadilhas"))
