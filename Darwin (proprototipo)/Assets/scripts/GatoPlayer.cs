@@ -13,7 +13,6 @@ public class GatoPlayer : MonoBehaviour
     private LayerMask layerDoChao;
     private Animator animator;
     private GameObject cameraPos;
-    public static bool fasemorte = true;
     [SerializeField] private GameObject playerPrefab; // Prefab do sapo
     private GameObject playerInstance; // Instância do sapo
 
@@ -25,7 +24,6 @@ public class GatoPlayer : MonoBehaviour
 
     // danos e morte
     private int contadorDanos = 0;
-
 
     // Start is called before the first frame update
     void Start()
@@ -152,12 +150,12 @@ public class GatoPlayer : MonoBehaviour
                 PlayerPrefs.SetString("UltimaFase", SceneManager.GetActiveScene().name);
                 animator.SetBool("morte", true); // Ativa animação de morte
                 StartCoroutine(DestruirPersonagem()); // Chama o método para destruir o personagem após a animação
-                if(fasemorte){
-                    fasemorte = false;
+                if(movePlayer.fasemorte){
+                    movePlayer.fasemorte = false;
                     Invoke("fase", 0.5f);
                 }
                 else{
-                    fasemorte = true;
+                    movePlayer.fasemorte = true;
                     Invoke("gameover", 0.5f);
                 }
             }   

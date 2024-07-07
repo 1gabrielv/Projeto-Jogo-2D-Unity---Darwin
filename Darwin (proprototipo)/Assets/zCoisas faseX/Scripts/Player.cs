@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -101,9 +102,14 @@ public class Player : MonoBehaviour
                 animator.SetTrigger("Dead");
                 rbplayer.velocity = Vector2.zero;  // Para o movimento do personagem
                 rbplayer.isKinematic = true;  // Torna o Rigidbody cinemático para impedir mais movimentação
+                Invoke("gameover", 0.5f);
             }
         }
 
+    }
+
+    private void gameover(){
+        SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
     }
 
     private void OnTriggerEnter2D(Collider2D collision){

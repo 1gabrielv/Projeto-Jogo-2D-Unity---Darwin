@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SapoPlayer : MonoBehaviour
 {
@@ -110,6 +111,15 @@ public class SapoPlayer : MonoBehaviour
         if (other.CompareTag("Armadilhas"))
         {
             StartCoroutine(HandleTrap());
+            PlayerPrefs.SetString("UltimaFase", SceneManager.GetActiveScene().name);
+            if(movePlayer.fasemorte){
+                movePlayer.fasemorte = false;
+                Invoke("fase", 0.5f);
+            }
+            else{
+                movePlayer.fasemorte = true;
+                Invoke("gameover", 0.5f);
+            }
         }
     }
 
@@ -119,5 +129,12 @@ public class SapoPlayer : MonoBehaviour
         fumaça.SetActive(true);
         yield return new WaitForSeconds(1f); // Espera 1 segundo
         Destroy(gameObject);
+    }
+
+    private void fase(){
+        SceneManager.LoadScene("morte", LoadSceneMode.Single);
+    }
+    private void gameover(){
+        SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
     }
 }

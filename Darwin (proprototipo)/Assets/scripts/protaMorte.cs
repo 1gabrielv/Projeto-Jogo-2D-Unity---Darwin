@@ -15,7 +15,6 @@ public class protaMorte : MonoBehaviour
     private LayerMask layerDoChao;
     private Animator animator; // Troca de animações
     private int contEstrelas = 0;
-    
     // Start is called before the first frame update
     void Start()
     {

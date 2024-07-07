@@ -151,12 +151,12 @@ public class guarda : MonoBehaviour
                 speedPlayer = 0;
                 animator.SetBool("morte", true); // Ativa animação de morte
                 StartCoroutine(DestruirPersonagem()); // Chama o método para destruir o personagem após a animação
-                if(GatoPlayer.fasemorte){
-                    GatoPlayer.fasemorte = false;
+                if(movePlayer.fasemorte){
+                    movePlayer.fasemorte = false;
                     Invoke("fase", 0.5f);
                 }
                 else{
-                    GatoPlayer.fasemorte = true;
+                    movePlayer.fasemorte = true;
                     Invoke("gameover", 0.5f);
                 }
             }   

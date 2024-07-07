@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class livroScript : MonoBehaviour
 {
@@ -101,7 +102,23 @@ public class livroScript : MonoBehaviour
      private void OnCollisionEnter2D(Collision2D col) {
         if(col.gameObject.CompareTag("slime")){
             StartCoroutine(HandleTrap());
+            PlayerPrefs.SetString("UltimaFase", SceneManager.GetActiveScene().name);
+            if(movePlayer.fasemorte){
+                movePlayer.fasemorte = false;
+                Invoke("fase", 0.5f);
+            }
+            else{
+                movePlayer.fasemorte = true;
+                Invoke("gameover", 0.5f);
+            }
         }
+    }
+
+    private void fase(){
+        SceneManager.LoadScene("morte", LoadSceneMode.Single);
+    }
+    private void gameover(){
+        SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
     }
 
     private IEnumerator HandleTrap()

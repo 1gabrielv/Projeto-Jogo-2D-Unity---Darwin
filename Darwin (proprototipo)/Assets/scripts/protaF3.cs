@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class protaF3 : MonoBehaviour
 {
@@ -166,6 +167,15 @@ void FixedUpdate() { // A Unity às vezes buga sem isso pra movimentar o player
                 animator.SetTrigger("Dead");
                 oRigidbody2D.velocity = Vector2.zero;  // Para o movimento do personagem
                 oRigidbody2D.isKinematic = true;  // Torna o Rigidbody cinemático para impedir mais movimentação
+                PlayerPrefs.SetString("UltimaFase", SceneManager.GetActiveScene().name);
+                if(movePlayer.fasemorte){
+                    movePlayer.fasemorte = false;
+                    Invoke("fase", 0.5f);
+                }
+                else{
+                    movePlayer.fasemorte = true;
+                    Invoke("gameover", 0.5f);
+                }
             }
         }
     }
@@ -173,22 +183,28 @@ void FixedUpdate() { // A Unity às vezes buga sem isso pra movimentar o player
 {
     if (other.CompareTag("livro"))
     {
-        isLivro = true;
-        FogoLivro.SetActive(true);
+        if(!isGuarda && !isEsfregao){
+            isLivro = true;
+            FogoLivro.SetActive(true);
+        }
 
     }
 
     if (other.CompareTag("guarda"))
     {
-        isGuarda = true;
-        FogoGuarda.SetActive(true);
+        if(!isLivro && !isEsfregao){
+            isGuarda = true;
+            FogoGuarda.SetActive(true);
+        }
 
     }
 
     if (other.CompareTag("esfregao"))
     {
-        isEsfregao = true;
-        FogoEsfregao.SetActive(true);
+        if(!isLivro && !isGuarda){
+            isEsfregao = true;
+            FogoEsfregao.SetActive(true);
+        }
 
     }
 
@@ -198,7 +214,22 @@ void FixedUpdate() { // A Unity às vezes buga sem isso pra movimentar o player
             animator.SetTrigger("Dead");
             oRigidbody2D.velocity = Vector2.zero;  // Para o movimento do personagem
             oRigidbody2D.isKinematic = true;  // Torna o Rigidbody cinemático para impedir mais movimentação
+            PlayerPrefs.SetString("UltimaFase", SceneManager.GetActiveScene().name);
+            if(movePlayer.fasemorte){
+                    movePlayer.fasemorte = false;
+                    Invoke("fase", 0.5f);
+                }
+                else{
+                    movePlayer.fasemorte = true;
+                    Invoke("gameover", 0.5f);
+                }
         }
+    }
+    private void fase(){
+        SceneManager.LoadScene("morte", LoadSceneMode.Single);
+    }
+    private void gameover(){
+        SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
     }
 
         void TrocarFormaLivro()
