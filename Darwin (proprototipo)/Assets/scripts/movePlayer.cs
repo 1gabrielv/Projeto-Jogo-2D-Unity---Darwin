@@ -201,7 +201,7 @@ public class movePlayer : MonoBehaviour
             oRigidbody2D.velocity = Vector2.zero;  // Para o movimento do personagem
             oRigidbody2D.isKinematic = true;  // Torna o Rigidbody cinemático para impedir mais movimentação
             StartCoroutine(HandleTrap());
-            //PlayerPrefs.SetString("UltimaFase", SceneManager.GetActiveScene().name);
+            PlayerPrefs.SetString("UltimaFase", SceneManager.GetActiveScene().name);
             if(fasemorte){
                 fasemorte = false;
                 Invoke("fase", 0.5f);

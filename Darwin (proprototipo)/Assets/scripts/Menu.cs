@@ -10,7 +10,7 @@ public class Menu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        movePlayer.fasemorte = true;
     }
 
     // Update is called once per frame
