@@ -15,6 +15,11 @@ public class protaMorte : MonoBehaviour
     private LayerMask layerDoChao;
     private Animator animator; // Troca de animações
     private int contEstrelas = 0;
+
+    public GameObject texto;
+    public GameObject fundo;
+    public GameObject texto2;
+    public GameObject fundo2;
     // Start is called before the first frame update
     void Start()
     {
@@ -70,14 +75,22 @@ public class protaMorte : MonoBehaviour
     {
         contEstrelas = contEstrelas + 1;
         Destroy(other);
+        if(contEstrelas == 4){
+            texto.SetActive(false);
+            fundo.SetActive(false);
+        }
         if(contEstrelas == 9){
-            Invoke("retorna", 0.5f);
+            texto2.SetActive(true);
+            fundo2.SetActive(true);
+            Invoke("retorna", 2f);
         }
     }
 }
     private void retorna(){
         string ultimaFase = PlayerPrefs.GetString("UltimaFase", "Fase 1");
         SceneManager.LoadScene(ultimaFase, LoadSceneMode.Single);
+        texto2.SetActive(false);
+        fundo2.SetActive(false);
     }
 
 }
