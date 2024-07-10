@@ -5,11 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class QuedaTransicao : MonoBehaviour
 {
-    [SerializeField]
-    private string nome;
-
-    public float time;
-
     // Update is called once per frame
     void Update()
     {
@@ -17,10 +12,21 @@ public class QuedaTransicao : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision){
-        Invoke("fases", time);
+        PlayerPrefs.SetString("UltimaFase", SceneManager.GetActiveScene().name);
+        if(movePlayer.fasemorte){
+            movePlayer.fasemorte = false;
+            Invoke("fase", 0.5f);
+        }
+        else{
+            movePlayer.fasemorte = true;
+            Invoke("gameover", 0.8f);
+        }
     }
 
-    public void fases(){
-        SceneManager.LoadScene(this.nome, LoadSceneMode.Single);
+    private void fase(){
+        SceneManager.LoadScene("morte", LoadSceneMode.Single);
+    }
+    private void gameover(){
+        SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
     }
 }

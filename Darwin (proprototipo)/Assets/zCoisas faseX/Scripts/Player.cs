@@ -102,12 +102,22 @@ public class Player : MonoBehaviour
                 animator.SetTrigger("Dead");
                 rbplayer.velocity = Vector2.zero;  // Para o movimento do personagem
                 rbplayer.isKinematic = true;  // Torna o Rigidbody cinemático para impedir mais movimentação
-                Invoke("gameover", 0.5f);
+                PlayerPrefs.SetString("UltimaFase", SceneManager.GetActiveScene().name);
+                if(movePlayer.fasemorte){
+                    movePlayer.fasemorte = false;
+                    Invoke("fase", 0.5f);
+                }
+                else{
+                    movePlayer.fasemorte = true;
+                    Invoke("gameover", 0.8f);
+                }
             }
         }
 
     }
-
+    private void fase(){
+        SceneManager.LoadScene("morte", LoadSceneMode.Single);
+    }
     private void gameover(){
         SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
     }
