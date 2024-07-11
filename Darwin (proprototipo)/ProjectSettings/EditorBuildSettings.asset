@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/morte.unity
     guid: f2d5cb7123e6ca64f9ccdf8d4a65377c
   - enabled: 1
+    path: Assets/Scenes/Final.unity
+    guid: 14868575797c16041beabe9a2ac935f0
+  - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 13cd6f563ddf71a44b1fb1b1dfb29945
   m_configObjects: {}
